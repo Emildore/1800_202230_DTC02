@@ -8,7 +8,11 @@
 
 This browser based web application to ...
 
+<<<<<<< HEAD
 * Hello, my name is Elijah and I'm excited to be working on this project
+=======
+* My name is Wilber and I am excited to develop something useful for the first time ever.
+>>>>>>> 303b6602a03357c63b328a037941fa0adeffec90
 
 ## Technologies
 

@@ -7,8 +7,14 @@
 ## General Info
 
 This browser based web application to ...
+<<<<<<< HEAD
 Hello my name is Emily. I'm excited about this project because...
  
+=======
+
+* My name is Wilber and I am excited to develop something useful for the first time ever.
+
+>>>>>>> 303b6602a03357c63b328a037941fa0adeffec90
 ## Technologies
 
 Technologies used for this project:
@@ -17,7 +23,11 @@ Technologies used for this project:
 * JavaScript
 * Bootstrap
 * ...
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 303b6602a03357c63b328a037941fa0adeffec90
 ## Content
 
 Content of the project folder:

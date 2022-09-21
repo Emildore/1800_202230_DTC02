@@ -42,13 +42,36 @@
   <nav id="navbarPlaceholder"></nav>
 
   <div style="overflow: auto;">
-    <p style="margin-top: 7px; margin-left: 20px; float: left;">To-do list</p>
-    <a href="./taskcreationform.html" class="btn btn-primary" style="margin-right: 20px; float:right">
-      Add Task
-    </a>
+    <p style="margin-top: 7px; margin-left: 20px; float: left;">Create Task</p>
   </div>
   <hr>
 
+  <form style="margin: auto; margin-bottom: 2%; width: 80%;">
+    <div class="form-group">
+      <label for="formGroupExampleInput">Task Name</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Task">
+    </div>
+    <div class="row" style="margin-top: 10px;">
+      <div class="col">
+        <label for="formGroupExampleInput">To-do-by Date</label>
+        <input type="text" class="form-control" placeholder="Month">
+      </div>
+      <div class="col">
+        <label for="formGroupExampleInput"></label>
+        <input type="text" class="form-control" placeholder="Day">
+      </div>
+    </div>
+    <div class="form-group" style="margin-top: 10px;">
+      <label for="Task Description">Description</label>
+      <textarea class="form-control" id="Task Description" rows="3"></textarea>
+    </div>
+  </form>
+
+  <div style="margin: auto; width: 5.796%;">
+    <a href="#" class="btn btn-primary">
+      Add Task
+    </a>
+  </div>
 
 
 

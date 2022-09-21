@@ -5,16 +5,22 @@
 * [Contents](#content)
 
 ## General Info
+
 This browser based web application to ...
-	
+
+* My name is Wilber and I am excited to develop something useful for the first time ever.
+
 ## Technologies
+
 Technologies used for this project:
+
 * HTML, CSS
 * JavaScript
-* Bootstrap 
+* Bootstrap
 * ...
-	
+
 ## Content
+
 Content of the project folder:
 
 ```
@@ -39,6 +45,6 @@ Firebase hosting files:
 ```
 
 Tips for file naming files and folders:
+
 * use lowercase with no spaces
 * use dashes (not underscore) for word separation
-

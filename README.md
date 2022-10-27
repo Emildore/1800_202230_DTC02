@@ -11,6 +11,7 @@ This browser based web application to ...
 * Hello my name is Emily. I'm excited about this project because...
 * Hello, my name is Elijah and I'm excited to be working on this project
 * My name is Wilber and I am excited to develop something useful for the first time ever.
+* Hello, my name is Amir, and I'm excited to be a part of this project!
 
 ## Technologies
 

@@ -17,6 +17,17 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+
+  <!-------------------------------------------------------->
+  <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+  <!-------------------------------------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
   <!-- Other libraries go here -->
 
   <!-- Link to styles of your own -->
@@ -28,40 +39,7 @@
   <!------------------------------>
   <!-- Your HTML Layout go here -->
   <!------------------------------>
-  <header class="py-3 mb-3 border-bottom">
-    <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
-      <div class="dropdown">
-        <a href="#"
-          class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none dropdown-toggle"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="images/Motivation Logo.png">
-          <svg class="bi me-2" width="40" height="32">
-            <use xlink:href="#bootstrap"></use>
-          </svg>
-        </a>
-        <ul class="dropdown-menu text-small shadow">
-          <li><a class="dropdown-item active" href="#" aria-current="page">Overview</a></li>
-          <li><a class="dropdown-item" href="#">Quotes</a></li>
-          <li><a class="dropdown-item" href="#">Images</a></li>
-          <li><a class="dropdown-item" href="./todolist.html">To-Do List</a></li>
-          <li><a class="dropdown-item" href="#">Schedule</a></li>
-          <li><a class="dropdown-item" href="#">Reminders</a></li>
-          <li><a class="dropdown-item" href="#">Spending</a></li>
-          <li><a class="dropdown-item" href="#">Meals</a></li>
-          <li><a class="dropdown-item" href="#">Fitness</a></li>
-          <li><a class="dropdown-item" href="#">Trackers</a></li>
-          <li><a class="dropdown-item" href="#">Information</a></li>
-        </ul>
-      </div>
-
-      <div class="d-flex align-items-center">
-        <form class="w-100 me-3" role="search">
-          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-        </form>
-
-      </div>
-    </div>
-  </header>
+  <nav id="navbarPlaceholder"></nav>
 
   <div style="overflow: auto;">
     <p style="margin-top: 7px; margin-left: 20px; float: left;">To-do list</p>
@@ -82,6 +60,9 @@
 
   <!-- Link to scripts of your own -->
   <!-- <script src="./scripts/script.js"></script> -->
+  <script src="./scripts/firebaseAPI_DTC02.js"></script>
+  <!-- <script src="./scripts/script.js"></script> -->
+  <script src="./scripts/skeleton.js"></script>
 
 </body>
 

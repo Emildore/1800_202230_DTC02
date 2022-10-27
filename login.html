@@ -41,36 +41,11 @@
     <!------------------------------>
 
 
-    <nav class="py-3 mb-3 border-bottom">
-        <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
-            <div>
-                <img src="images/Motivation Logo.png">
-                <svg class="bi me-2" width="40" height="32">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-                </a>
-            </div>
+    <nav id="navbarPlaceholder"></nav>
 
-            <div class="d-flex justify-content-end">
-                <a href="login.html"><button type="button" class="btn btn-outline-dark me-2">Login</button>
-                </a>
-            </div>
-        </div>
-    </nav>
 
-    <div class="p-5 text-left bg-image rounded-3" style="
-      background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');">
-        <div class="container-fluid py-5">
-            <div class="text-white">
-                <h1 class="display-5 fw-bold">Motivation App</h1>
-                <p class="col-md-8 fs-4">Our team, DTC02, is developing a web application to help anybody
-                    garner
-                    motivation by
-                    generating positive momentum and
-                    giving positive affirmations.</p>
-            </div>
-        </div>
-    </div>
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
 
     <nav id="footerPlaceholder"></nav>
 
@@ -83,6 +58,7 @@
     <!-- Link to scripts of your own -->
     <script src="./scripts/firebaseAPI_DTC02.js"></script>
     <!-- <script src="./scripts/script.js"></script> -->
+    <script src="./scripts/authentication.js"></script>
     <script src="./scripts/skeleton.js"></script>
 
 </body>

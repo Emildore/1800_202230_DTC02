@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #header {
+            padding: 20px;
+            padding-bottom: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background-image: url('images/track.jpg');
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        div {
+            margin: 0px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-top: 0px;
+        }
+
+        img {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            height: 100%;
+            width: 150px
+        }
+
+        table {
+            width: 100%;
+            padding: 0px
+        }
+
+        h4 {
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+
+        #table_rule {
+            padding-top: 0px;
+            margin-top: 0px;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            #left_column,
+            #right_column {
+                width: 50%;
+            }
+
+            #left_column_i,
+            #right_column_i {
+                width: 100%;
+            }
+
+            #right_column {
+                padding-left: 0px;
+            }
+
+            .card img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:300px) {
+            #topnav a {
+                float: none !important;
+            }
+
+            #left_column,
+            #right_column {
+                width: 100%;
+            }
+
+            #left_column_i,
+            #right_column_i {
+                width: 100%;
+            }
+
+            .card img {
+                width: 100%;
+            }
+        }
+
+        #footer {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header" style="text-align: center;">
+        <h1 style="margin-bottom: 15px;">Workouts</h1>
+        <img src="images/squats.jpg">
+        <img src="images/jogs.jpg">
+        <img src="images/cycling.jpg">
+        <img src="images/kettlebells.jpg">
+        <img src="images/jumprope.jpg">
+        <hr width="100%">
+    </div>
+
+    <div class="card">
+        <table>
+            <tr style="text-align: center;">
+                <td>
+                    <h4>Type</h4>
+                    <hr id="table_rule">
+                </td>
+                <td>
+                    <h4>Date</h4>
+                    <hr id="table_rule">
+                </td>
+                <td>
+                    <h4>Exercises</h4>
+                    <hr id="table_rule">
+                </td>
+                <td style="width: 50%">
+                    <h4>Performance</h4>
+                    <hr id="table_rule">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>

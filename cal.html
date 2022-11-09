@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+
     <!-- Boostrap Library JS CDN  go here -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -27,175 +28,69 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css" />
+    <link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.css" />
+    <script src="https://uicdn.toast.com/tui.code-snippet/latest/tui-code-snippet.js"></script>
+    <script src="https://uicdn.toast.com/tui.dom/v3.0.0/tui-dom.js"></script>
+    <script src="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.min.js"></script>
+    <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.min.js"></script>
+    <script src="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+
+
 
     <!-- Other libraries go here -->
 
     <!-- Link to styles of your own -->
-    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+    <link rel="stylesheet" href="./styles/calendar.css">
 </head>
 
 <body>
-    <section class="ftco-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6 text-center mb-5">
-                    <h2 class="heading-section">Calendar #03</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="calendar-section">
-                        <div class="row no-gutters">
-                            <div class="col-md-6">
-                                <div class="calendar calendar-first" id="calendar_first">
-                                    <div class="calendar_header">
-                                        <button class="switch-month switch-left">
-                                            <i class="fa fa-chevron-left"></i>
-                                        </button>
-                                        <h2>August 2023</h2>
-                                        <button class="switch-month switch-right">
-                                            <i class="fa fa-chevron-right"></i>
-                                        </button>
-                                    </div>
-                                    <div class="calendar_weekdays">
-                                        <div>Sun</div>
-                                        <div>Mon</div>
-                                        <div>Tue</div>
-                                        <div>Wed</div>
-                                        <div>Thu</div>
-                                        <div>Fri</div>
-                                        <div>Sat</div>
-                                    </div>
-                                    <div class="calendar_content">
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                        <div>1</div>
-                                        <div>2</div>
-                                        <div>3</div>
-                                        <div>4</div>
-                                        <div>5</div>
-                                        <div>6</div>
-                                        <div>7</div>
-                                        <div>8</div>
-                                        <div>9</div>
-                                        <div>10</div>
-                                        <div>11</div>
-                                        <div>12</div>
-                                        <div>13</div>
-                                        <div>14</div>
-                                        <div>15</div>
-                                        <div>16</div>
-                                        <div>17</div>
-                                        <div>18</div>
-                                        <div>19</div>
-                                        <div>20</div>
-                                        <div>21</div>
-                                        <div>22</div>
-                                        <div>23</div>
-                                        <div>24</div>
-                                        <div>25</div>
-                                        <div>26</div>
-                                        <div>27</div>
-                                        <div>28</div>
-                                        <div>29</div>
-                                        <div>30</div>
-                                        <div>31</div>
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="calendar calendar-second" id="calendar_second">
-                                    <div class="calendar_header">
-                                        <button class="switch-month switch-left">
-                                            <i class="fa fa-chevron-left"></i>
-                                        </button>
-                                        <h2>September 2023</h2>
-                                        <button class="switch-month switch-right">
-                                            <i class="fa fa-chevron-right"></i>
-                                        </button>
-                                    </div>
-                                    <div class="calendar_weekdays">
-                                        <div>Sun</div>
-                                        <div>Mon</div>
-                                        <div>Tue</div>
-                                        <div>Wed</div>
-                                        <div>Thu</div>
-                                        <div>Fri</div>
-                                        <div>Sat</div>
-                                    </div>
-                                    <div class="calendar_content">
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                        <div>1</div>
-                                        <div>2</div>
-                                        <div>3</div>
-                                        <div>4</div>
-                                        <div>5</div>
-                                        <div>6</div>
-                                        <div>7</div>
-                                        <div>8</div>
-                                        <div>9</div>
-                                        <div>10</div>
-                                        <div>11</div>
-                                        <div>12</div>
-                                        <div>13</div>
-                                        <div>14</div>
-                                        <div>15</div>
-                                        <div>16</div>
-                                        <div>17</div>
-                                        <div>18</div>
-                                        <div>19</div>
-                                        <div>20</div>
-                                        <div>21</div>
-                                        <div>22</div>
-                                        <div>23</div>
-                                        <div>24</div>
-                                        <div>25</div>
-                                        <div>26</div>
-                                        <div>27</div>
-                                        <div>28</div>
-                                        <div>29</div>
-                                        <div>30</div>
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                        <div class="blank"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.js+bootstrap.min.js.pagespeed.jc.oR_v7F8RJE.js"></script>
-    <script>eval(mod_pagespeed_$XOiwCtyOP);</script>
-    <script>eval(mod_pagespeed_8JNiFXjbID);</script>
-    <script src="js/main.js"></script>
-    <script defer=""
-        src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
-        integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
-        data-cf-beacon="{&quot;rayId&quot;:&quot;763ec9f70fb0f4b2&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2022.10.3&quot;,&quot;si&quot;:100}"
-        crossorigin="anonymous"></script>
+
+    <!------------------------------>
+    <!-- Your HTML Layout go here -->
+    <!------------------------------>
+    <nav id="navbarPlaceholder"></nav>
+    <span id="menu-navi">
+        <button type="button" class="btn btn-default btn-sm move-today" data-action="move-today">Today</button>
+        <button type="button" class="btn btn-default btn-sm move-day" data-action="move-prev">
+            <i class="calendar-icon ic-arrow-line-left" data-action="move-prev"></i>
+        </button>
+        <button type="button" class="btn btn-default btn-sm move-day" data-action="move-next">
+            <i class="calendar-icon ic-arrow-line-right" data-action="move-next"></i>
+        </button>
+    </span>
+    <span id="renderRange" class="render-range"></span>
+
+    <div class="promo_card" id="post">
+        <h2>Custom popUp Post </h2>
+    </div>
+    <div class="promo_card" id="event">
+        <h2>Custom popUp Event </h2>
+    </div>
+    <div class="promo_card" id="offer">
+        <h2>Custom popUp Offer </h2>
+    </div>
+    <div class="promo_card" id="create">
+        <h2>Custom Create Schedule popUp </h2>
+    </div>
+
+
+
+    <!---------------------------------------------->
+    <!-- Your own JavaScript functions go here    -->
+    <!---------------------------------------------->
+
+    <!-- Link to scripts of your own -->
+    <script src="./scripts/firebaseAPI_DTC02.js"></script>
+    <script src="./scripts/calendar.js"></script>
+    <script src="./scripts/skeleton.js"></script>
 
 
 </body>
+<footer class="py-3 my-4">
+    <hr>
+    <p class="text-center text-muted">© 2022 BCIT COMP1800 Creations</p>
+</footer>
 
 </html>

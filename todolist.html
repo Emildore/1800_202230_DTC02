@@ -48,12 +48,40 @@
     </a>
   </div>
   <hr>
-  <div id="tasks" style="margin: auto; width: 80%;">
-    <div id="taskPlaceholder"></div>
+  <div id="tasks-go-here" style="margin: auto; width: 80%;">
   </div>
 
 
-
+  <template id="taskCardTemplate">
+    <div style="background-color: gainsboro; overflow: auto; border-radius: 25px; padding: 2%;box-sizing: border-box;">
+      <div id="content" style="float: left; width: 85%; overflow: auto; box-sizing: border-box;">
+        <h1 id="taskName" style="float: left;">
+          Task Name
+        </h1>
+        <div style="float: right; margin-right: 1%">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Done
+          </label>
+          <a id="deletebtn" class="btn btn-secondary">
+            Delete
+          </a>
+        </div>
+        <p id="notes" style="padding-top: 20px; margin: auto; width: 95% ; float: left;">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione corrupti optio facilis aspernatur aliquid amet
+          quas
+          sint officiis itaque quae!
+        </p>
+      </div>
+      <div id="date"
+        style="float: right; border-left: 1px gray solid; text-align: center; padding-left: 15px; width: 15%;">
+        <h2 id="month">Month</h2>
+        <h1 id="day">00</h1>
+      </div>
+      <div style="float: left;">
+      </div>
+    </div>
+  </template>
 
 
   <!---------------------------------------------->

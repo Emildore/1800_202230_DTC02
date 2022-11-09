@@ -278,6 +278,9 @@ function hexToRGBA(hex) {
         }]);
 
         $('#modal-new-schedule').modal('hide');
+
+
+
     }
 
     function onChangeNewScheduleCalendar(e) {
@@ -440,3 +443,4 @@ function hexToRGBA(hex) {
     // });
     // calendarList.innerHTML = html.join('\n');
 })();
+

@@ -21,7 +21,8 @@
   <!-------------------------------------------------------->
   <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
   <!-------------------------------------------------------->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
@@ -45,60 +46,6 @@
   <link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9" />
   <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico" />
   <meta name="theme-color" content="#712cf9" />
-
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-
-    .b-example-divider {
-      height: 3rem;
-      background-color: rgba(0, 0, 0, 0.1);
-      border: solid rgba(0, 0, 0, 0.15);
-      border-width: 1px 0;
-      box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
-        inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
-    }
-
-    .b-example-vr {
-      flex-shrink: 0;
-      width: 1.5rem;
-      height: 100vh;
-    }
-
-    .bi {
-      vertical-align: -0.125em;
-      fill: currentColor;
-    }
-
-    .nav-scroller {
-      position: relative;
-      z-index: 2;
-      height: 2.75rem;
-      overflow-y: hidden;
-    }
-
-    .nav-scroller .nav {
-      display: flex;
-      flex-wrap: nowrap;
-      padding-bottom: 1rem;
-      margin-top: -1px;
-      overflow-x: auto;
-      text-align: center;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-    }
-  </style>
 </head>
 
 <body>
@@ -106,24 +53,14 @@
   <!-- Your HTML Layout go here -->
   <!------------------------------>
 
-  <!-- Source of this bootstrap: https://getbootstrap.com/docs/5.2/examples/masonry/ -->
-  <!-- Quotes: https://dailystoic.com/stoic-quotes/ -->
+  <!-- nav bar -->
   <nav id="navbarPlaceholder"></nav>
-  <div class="container">
-    <h1>List of countries:</h1>
-    <div class="container">
-      <div id="countries-go-here" class="row row-cols-auto">
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <h1>List of heros:</h1>
-    <div class="container">
-      <div id="heros-go-here" class="row row-cols-auto">
-      </div>
-    </div>
-  </div>
+
+
+  <!-- Source of this bootstrap: https://getbootstrap.com/docs/5.2/examples/masonry/ -->
   <main class="container py-5">
+
+
     <h1>Motivational Quotes</h1>
     <p class="lead">
       Here are some quotes to help you if you're feeling blue.
@@ -137,184 +74,179 @@
     <hr class="my-5" />
 
 
+    <!-- Beginning of quotes card -->
+    <div class="row" data-masonry='{"percentPosition": true }' style="box-sizing: border-box; padding-bottom: 50px;">
 
 
-    <div class="row" data-masonry='{"percentPosition": true }'>
+      <!-- First Quote Begin -->
       <div class="col-sm-6 col-lg-4 mb-4">
         <div class="card">
-          <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
-            role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#868e96" />
-            <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
-          </svg> -->
-          <img
-            src="https://alpha.aeon.co/images/8ef4a704-6de2-4ec4-9b2f-b097715703b1/idea_sized-gettyimages-82091658.jpg"
-            style="max-height: 200px; object-fit: cover" alt="Viktor Frankl" />
-
+          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
+            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=118237"
+            alt="random image">
           <div class="card-body">
-            <h5 class="card-title"> “What man actually needs is not a tensionless state but rather the striving and
-              struggling for some goal
-              worthy of him.”</h5>
+            <h5 class="card-title" id="random_quote0"></h5>
             <br>
-
-            <figcaption class="blockquote-footer mb-0 text-muted">
-              Viktor Frankl in
-              <cite title="Source Title">Happiness and Meaning</cite>
-            </figcaption>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-            </figure>
+            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author0"></figcaption>
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-4 mb-4">
-        <div class="card p-3">
-          <figure class="p-3 mb-0">
-            <blockquote class="blockquote">
-              <p>
-                “You have power over your mind – not outside events. Realize
-                this, and you will find strength.”
-              </p>
-            </blockquote>
-            <figcaption class="blockquote-footer mb-0 text-muted">
-              Marcus Aurelius in
-              <cite title="Source Title">Meditations</cite>
-            </figcaption>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </figure>
-        </div>
-      </div>
+      <!-- First Quote End -->
+
+
+      <!-- Second Quote Begin -->
       <div class="col-sm-6 col-lg-4 mb-4">
         <div class="card">
-          <!-- <svg
-              class="bd-placeholder-img card-img-top"
-              width="100%"
-              height="200"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="Placeholder: Image cap"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#868e96" />
-              <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
-            </svg> -->
-
-          <!-- How to fill a box with an image -->
-          <!-- https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/Fill_a_box_with_an_image -->
-          <img src="https://miro.medium.com/max/1400/0*YjsJxKZEqROxHXqR" style="max-height: 200px; object-fit: cover"
-            alt="Marcus Aurelius" />
-
+          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
+            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=118231"
+            alt="random image">
           <div class="card-body">
-            <!-- <h5 class="card-title">Card title</h5> -->
-            <p class="card-text">
-              “Remember how long you’ve been putting this off, how many
-              extensions the gods gave you, and you didn’t use them. At some
-              point you have to recognize what the world it is that you belong
-              to; what power rules it and from what source you spring; that
-              there is a limit to the time assigned you, and if you don’t use
-              it to free yourself it will be gone and will never return.”
-            </p>
-            <figcaption class="blockquote-footer mb-0 text-muted">
-              Marcus Aurelius in
-              <cite title="Source Title">Meditations</cite>
-            </figcaption>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
+            <h5 class="card-title" id="random_quote1"></h5>
+            <br>
+            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author1"></figcaption>
           </div>
         </div>
       </div>
+      <!-- Second Quote End -->
 
+
+      <!-- Third Quote Begin -->
       <div class="col-sm-6 col-lg-4 mb-4">
-        <div class="card p-3">
-          <figure class="p-3 mb-0">
-            <blockquote class="blockquote">
-              <p>“You become what you give your attention to.”</p>
-            </blockquote>
-            <figcaption class="blockquote-footer mb-0 text-muted">
-              Epictetus in
-              <cite title="Source Title">The Art of Living</cite>
-            </figcaption>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </figure>
+        <div class="card">
+          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
+            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=118238"
+            alt="random image">
+          <div class="card-body">
+            <h5 class="card-title" id="random_quote2"></h5>
+            <br>
+            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author2"></figcaption>
+          </div>
         </div>
       </div>
+      <!-- Third Quote End -->
+
+      <!-- Fourth Quote Begin -->
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
+            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=1108239"
+            alt="random image">
+          <div class="card-body">
+            <h5 class="card-title" id="random_quote3"></h5>
+            <br>
+            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author3"></figcaption>
+          </div>
+        </div>
+      </div>
+      <!-- Fourth Quote End -->
+
+
+      <!-- Fifth Quote Begin -->
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
+            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=118344239"
+            alt="random image">
+          <div class="card-body">
+            <h5 class="card-title" id="random_quote4"></h5>
+            <br>
+            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author4"></figcaption>
+          </div>
+        </div>
+      </div>
+      <!-- Fifth Quote End -->
+
+
+      <!-- Sixth Quote Begin -->
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
+            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=118243539"
+            alt="random image">
+          <div class="card-body">
+            <h5 class="card-title" id="random_quote5"></h5>
+            <br>
+            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author5"></figcaption>
+          </div>
+        </div>
+      </div>
+      <!-- Sixth Quote Begin -->
+
+
+      <!-- Seventh Quote Begin -->
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
+            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=114358239"
+            alt="random image">
+          <div class="card-body">
+            <h5 class="card-title" id="random_quote6"></h5>
+            <br>
+            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author6"></figcaption>
+          </div>
+        </div>
+      </div>
+      <!-- Seventh Quote End -->
+
+
+      <!-- Eighth Quote Begin -->
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
+            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=11823956"
+            alt="random image">
+          <div class="card-body">
+            <h5 class="card-title" id="random_quote7"></h5>
+            <br>
+            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author7"></figcaption>
+          </div>
+        </div>
+      </div>
+      <!-- Eighth Quote End -->
+
+
+      <!-- Ninth Quote Begin -->
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
+            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=1182347"
+            alt="random image">
+          <div class="card-body">
+            <h5 class="card-title" id="random_quote8"></h5>
+            <br>
+            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author8"></figcaption>
+          </div>
+        </div>
+      </div>
+      <!-- Ninth Quote End -->
+
+
+
+      <!-- sample code card -->
       <!-- <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="card text-bg-primary text-center p-3">
-            <figure class="mb-0">
-              <blockquote class="blockquote">
-                <p>I think she's Home Say Young from the squid game.</p>
-              </blockquote>
-              <figcaption class="blockquote-footer mb-0 text-white">
-                Someone famous in <cite title="Source Title">Source Title</cite>
-              </figcaption>
-            </figure>
-          </div>
-        </div> -->
+      <div class="card">
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
+          role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image
+            cap</text>
+        </svg>
 
-      <div class="col-sm-6 col-lg-4 mb-4">
-        <div class="card text-center">
-          <div class="card-body">
-            <!-- <h5 class="card-title">Card title</h5> -->
-            <h5 class="card-text">
-              "True wisdom comes to each of us when we realize how little we understand about life, ourselves, and the
-              world around us.""
-            </h5>
-            <figcaption class="blockquote-footer mb-0 text-muted">
-              Socrates
-            </figcaption>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </div>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <figcaption class="blockquote-footer mb-0 text-muted">
+            Someone famous
+          </figcaption>
         </div>
       </div>
-      <div class="col-sm-6 col-lg-4 mb-4">
-        <div class="card">
-          <!-- <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg"
-            role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#868e96" />
-            <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
-          </svg> -->
-          <img src="https://live.staticflickr.com/7001/6448811753_79c795fc41_b.jpg"
-            style="max-height: 300px; object-fit: cover" alt="Female statues in the The Athena Fountain" />
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4 mb-4">
-        <div class="card p-3 text-end">
-          <figure class="mb-0">
-            <blockquote class="blockquote">
-              <p>We are what we repeatedly do. Excellence, then, is not an act, but a habit.</p>
-            </blockquote>
-            <figcaption class="blockquote-footer mb-0 text-muted">
-              Will Durants in <cite title="Source Title">The Story of Philosophy</cite>
-            </figcaption>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </figure>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Know thyself.</h5>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </div>
-        </div>
-      </div>
+    </div> -->
+
+
+
     </div>
+    <!-- End of quotes card -->
+
   </main>
 
   <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js"

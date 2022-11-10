@@ -1,20 +1,73 @@
-function insertName() {
-    firebase.auth().onAuthStateChanged(user => {
-        // Check if a user is signed in:
-        if (user) {
-            // Do something for the currently logged-in user here: 
-            console.log(user.uid);
-            console.log(user.displayName);
-            user_Name = user.displayName;
+// setup = function () {
+//     $.ajax(
+//         {
+//             url: "https://goquotes-api.herokuapp.com/api/v1/random?count=1",
+//             type: "GET",
+//             success: function (data) {
+//                 for (i = 0; i < data.quotes.length; i++) {
+//                     $("span").append(
 
-            //method #1:  insert with html only
-            //document.getElementById("name-goes-here").innerText = user_Name;    //using javascript
-            //method #2:  insert using jquery
-            $("#name-goes-here").text(user_Name); //using jquery
+//                         `<p>${data.quotes[i].title}</p>`
 
-        } else {
-            // No user is signed in.
-        }
-    });
+
+//                     )
+//                         ;
+//                 }
+//             },
+//             error: function (error) {
+//                 console.log(error);
+//             }
+//         }
+//     )
+// }
+
+// $(document).ready(setup)
+
+function displayQuotes() {
+    // initializing these values for a function later
+    let random_int = Math.floor(Math.random() * 74);
+    let x = 0
+    // grabbing the data from firestore
+    db.collection("quotes").get()
+        .then(snap => {
+
+            snap.forEach(doc => { //iterate thru each doc
+                // below code peudo randomizes the quotes that are being pulled through firestore
+                x++
+                if (x == random_int) {
+
+                    var quote = doc.data().quote;
+                    var author = doc.data().author;
+                    // these codes allow the values from firestore to be injected in html
+                    $(`#quote`).html(`"${quote}"`)
+                    $(`#author`).html(`-${author}`)
+
+                    random_int++
+
+                }
+            })
+        })
 }
-insertName(); //run the function
+
+displayQuotes();
+
+
+function insertName() {
+    // to check if the user is logged in:
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            console.log(user.uid); // let me to know who is the user that logged in to get the UID
+            currentUser = db.collection("users").doc(user.uid); // will to to the firestore and go to the document of the user
+            currentUser.get().then(userDoc => {
+                //get the user name
+                var user_Name = userDoc.data().name;
+                console.log(user_Name);
+                $("#name-goes-here").text(user_Name); //jquery
+                // document.getElementByID("name-goes-here").innetText=user_Name;
+            })
+        }
+
+    })
+}
+
+insertName();

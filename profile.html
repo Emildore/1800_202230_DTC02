@@ -31,7 +31,7 @@
     <!-- Other libraries go here -->
 
     <!-- Link to styles of your own -->
-    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+    <link rel="stylesheet" href="./styles/profile.css">
 </head>
 
 <body>
@@ -40,44 +40,70 @@
     <!-- Your HTML Layout go here -->
     <!------------------------------>
     <nav id="navbarPlaceholder"></nav>
-
     <div class="container">
         <h1>User Profile </h1>
-        <form>
-            <fieldset class="mb-3" id="personalInfoFields" disabled>
-                <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" id="nameInput" class="form-control" placeholder="Enter your name">
+        <div>
+            <img src="currentImageUrl" class="profileImage" />
+            <button type="button" class="btn btn-outline-dark me-2" onclick="changeProfileImage()">Change
+                Image</button>
+        </div>
+        <form class="row g-3 justify-content-center">
+            <fieldset id="personalInfoFields" disabled>
+                <div class="col-md-12">
+                    <label for="inputFirstName" class="form-label">First Name</label>
+                    <input type="Name" class="form-control" id="inputFirstName">
                 </div>
-                <div class="form-group">
-                    <label>School</label>
-                    <input type="text" id="schoolInput" class="form-control" placeholder="Enter your school">
+                <div class="col-md-12">
+                    <label for="inputLastName" class="form-label">Last Name</label>
+                    <input type="LastName" class="form-control" id="inputLastName">
                 </div>
-                <div class="form-group">
-                    <label>City</label>
-                    <input type="text" id="cityInput" class="form-control" placeholder="Enter your city">
+                <div class="col-12">
+                    <label for="inputEmail" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="inputEmail" placeholder="@gmail.com">
+                </div>
+                <div class="col-12">
+                    <label for="inputSchool" class="form-label">School</label>
+                    <input type="text" class="form-control" id="inputSchool" placeholder="BCIT">
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main Street">
+                </div>
+                <div class="col-md-12">
+                    <label for="inputCity" class="form-label">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="col-md-12">
+                    <label for="inputState" class="form-label">State</label>
+                    <select id="inputState" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>BC</option>
+                    </select>
+                </div>
+                <div class="col-md-12">
+                    <label id="inputZip" class="form-label">Zip</label>
+                    <input type="text" class="form-control" id="inputZip">
                 </div>
             </fieldset>
+
             <div class="d-flex justify-content-end mt-5">
                 <button type="button" class="btn btn-outline-dark me-2" onclick="editUserInfo()">Edit</button>
                 <span style="width: 10px"></span>
                 <button type="button" class="btn btn-outline-dark me-2" onclick="saveUserInfo()">Save</button>
             </div>
         </form>
-    </div>
-
-    <nav id="footerPlaceholder"></nav>
+        <nav id="footerPlaceholder"></nav>
 
 
 
-    <!---------------------------------------------->
-    <!-- Your own JavaScript functions go here    -->
-    <!---------------------------------------------->
+        <!---------------------------------------------->
+        <!-- Your own JavaScript functions go here    -->
+        <!---------------------------------------------->
 
-    <!-- Link to scripts of your own -->
-    <script src="./scripts/firebaseAPI_DTC02.js"></script>
-    <script src="./scripts/profile.js"></script>
-    <script src="./scripts/skeleton.js"></script>
+        <!-- Link to scripts of your own -->
+        <script src="./scripts/firebaseAPI_DTC02.js"></script>
+        <script src="./scripts/profile.js"></script>
+        <script src="./scripts/skeleton.js"></script>
 
 </body>
 

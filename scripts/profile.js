@@ -10,18 +10,43 @@ function populateInfo() {
             currentUser.get()
                 .then(userDoc => {
                     let userName = userDoc.data().name;
+                    let userLast = userDoc.data().lastName;
+                    let userEmail = userDoc.data().email;
                     let userSchool = userDoc.data().school;
                     let userCity = userDoc.data().city;
+                    let userAddress = userDoc.data().address;
+                    let userState = userDoc.data().state;
+                    // let userZip = userDoc.data().Zip;
 
                     if (userName != null) {
-                        document.getElementById("nameInput").value = userName;
+                        document.getElementById("inputFirstName").value = userName;
+                    }
+
+                    if (userName != null) {
+                        document.getElementById("inputLastName").value = userLast;
+                    }
+
+                    if (userName != null) {
+                        document.getElementById("inputEmail").value = userEmail;
+                    }
+
+                    if (userName != null) {
+                        document.getElementById("inputSchool").value = userSchool;
+                    }
+
+                    if (userName != null) {
+                        document.getElementById("inputCity").value = userCity;
+                    }
+
+                    if (userName != null) {
+                        document.getElementById("inputAddress").value = userAddress;
                     }
                     if (userName != null) {
-                        document.getElementById("schoolInput").value = userSchool;
+                        document.getElementById("inputState").value = userState;
                     }
-                    if (userName != null) {
-                        document.getElementById("cityInput").value = userCity;
-                    }
+                    // if (userName != null) {
+                    //     document.getElementById("inputZip").value = userZip;
+                    // }
                 })
 
         } else {
@@ -37,14 +62,26 @@ function editUserInfo() {
 }
 
 function saveUserInfo() {
-    userName = document.getElementById("nameInput").value;
-    userSchool = document.getElementById("schoolInput").value;
-    userCity = document.getElementById("cityInput").value;
+    userName = document.getElementById("inputFirstName").value;
+    userLast = document.getElementById("inputLastName").value;
+    userEmail = document.getElementById("inputEmail").value;
+    userSchool = document.getElementById("inputSchool").value;
+    userAddress = document.getElementById("inputAddress").value;
+    userCity = document.getElementById("inputCity").value;
+    userState = document.getElementById("inputState").value;
+    userZip = document.getElementById("inputZip").value;
 
     currentUser.update({
         name: userName,
+        lastName: userLast,
+        email: userEmail,
         school: userSchool,
-        city: userCity
+        address: userAddress,
+        city: userCity,
+        state: userState,
+        // zip: userZip,
+
+
     })
         .then(() => {
             console.log("Document successfully updated!");

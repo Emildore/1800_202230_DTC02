@@ -1,27 +1,52 @@
-<nav class="py-3 mb-3 border-bottom">
-    <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
-        <div class="dropdown">
-            <a href="#"
-                class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none dropdown-toggle"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="images/Motivation Logo.png">
-                <svg class="bi me-2" width="40" height="32">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-            </a>
-            <ul class="dropdown-menu text-small shadow">
-                <li><a class="dropdown-item active" href="#" aria-current="page">Overview</a></li>
-                <!-- <li><a class="dropdown-item" href="#">Images</a></li> -->
-                <li><a class="dropdown-item" href="../cal.html">Calender</a></li>
-                <li><a class="dropdown-item" href="../todolist.html">To-Do List</a></li>
-                <li><a class="dropdown-item" href="../spending.html">Spending</a></li>
-                <li><a class="dropdown-item" href="../workouts.html">Fitness</a></li>
-                <li><a class="dropdown-item" href="../quotes.html">Quotes</a></li>
-                <!-- <li><a class="dropdown-item" href="#">Trackers</a></li> -->
-                <li><a class="dropdown-item" href="../information.html">Information</a></li>
-            </ul>
-        </div>
+<style>
+    a.nav-link {
+        color: #000000;
+    }
+</style>
 
+<nav class="navbar navbar-expand-lg bg-light border-bottom" aria-label="eleventh navbar example">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"> <img src="images/Motivation Logo.png">
+            <svg class="bi me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"></use>
+            </svg></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02"
+            aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample09">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link active" href="../main.html" aria-current="page">Overview</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Images</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link active" class="link-secondary" href="../cal.html">Calender</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../todolist.html">To-Do List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../spending.html">Spending</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../workouts.html">Fitness</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../quotes.html">Quotes</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Trackers</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="../information.html">Information</a>
+                </li>
+            </ul>
+
+        </div>
         <div class="d-flex justify-content-end">
 
             <div class="flex-shrink-0 dropdown">

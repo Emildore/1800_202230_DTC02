@@ -31,7 +31,7 @@
     <!-- Other libraries go here -->
 
     <!-- Link to styles of your own -->
-    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body>
@@ -43,13 +43,13 @@
 
     <div class="p-5 text-left bg-image rounded-3" style="
       background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');">
-        <div class="container-fluid py-5">
-            <div class="text-white">
-                <h1 class="display-5 fw-bold">Motivation App</h1>
-                <p class="col-md-8 fs-4">Our team, DTC02, is developing a web application to help anybody garner
-                    motivation by
-                    generating positive momentum and
-                    giving positive affirmations.</p>
+        <div class="container-fluid bg-dark text-light p-5">
+            <div class="container bg-dark p-5">
+                <h1 class="display-4">Hello, <span id="name-goes-here"></span></h1>
+                <hr>
+                <p id="intro">Quote of the day:</p>
+                <p id="quote"></p>
+                <p id="author"></p>
             </div>
         </div>
     </div>
@@ -64,7 +64,7 @@
 
     <!-- Link to scripts of your own -->
     <script src="./scripts/firebaseAPI_DTC02.js"></script>
-    <!-- <script src="./scripts/script.js"></script> -->
+    <script src="./scripts/main.js"></script>
     <script src="./scripts/skeleton.js"></script>
 
 </body>

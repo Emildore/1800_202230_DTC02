@@ -1,0 +1,14 @@
+#intro {
+    font-size: large;
+}
+
+#quote {
+    text-align: center;
+    font-size: 2.5em;
+
+}
+
+#author {
+    text-align: right;
+    font-style: italic;
+}

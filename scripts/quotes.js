@@ -45,6 +45,7 @@ function displayQuotes() {
                     var author = doc.data().author;
                     // these codes allow the values from firestore to be injected in html
                     $(`#random_quote${y}`).html(quote)
+                    console.log($(`#random_quote${y}`).html(quote))
                     $(`#random_author${y}`).html(author)
 
                     random_int++

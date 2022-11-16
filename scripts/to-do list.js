@@ -32,12 +32,8 @@ function displayCards(collection) {
 }
 
 function deleteHandler () {
-  
-}
-
-
-function setup () {
-  $("body").on('click', '.deletebtn', deleteHandler)
+  console.log("Delete")
+  db.collection('tasks').where("taskname", "==", taskname).delete();
 }
 
 displayCards("tasks")

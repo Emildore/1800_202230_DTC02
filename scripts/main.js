@@ -70,4 +70,16 @@ function insertName() {
     })
 }
 
+// might need to replace with this from lab 11
+// // Insert name function using the global variable "currentUser"
+// function insertName() {
+//     currentUser.get().then(userDoc => {
+//         //get the user name
+//         var user_Name = userDoc.data().name;
+//         console.log(user_Name);
+//         $("#name-goes-here").text(user_Name); //jquery
+//         // document.getElementByID("name-goes-here").innetText=user_Name;
+//     })
+// }
+
 insertName();

@@ -32,8 +32,11 @@
   <!-- Other libraries go here -->
 
   <!-- Link to styles of your own -->
-  <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+  <link rel="stylesheet" href="./styles/style.css">
   <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/masonry/" />
+  <!-- Google Icons (Material Design)-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
   <link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
@@ -73,24 +76,36 @@
     </p>
     <hr class="my-5" />
 
-
+    <div class="container">
+      <h1>Some popular hikes</h1>
+      <!-- Here is container for cards  -->
+      <div class="container">
+        <div id="quotesCardGroup" class="row row-cols-auto">
+        </div>
+      </div>
+    </div>
     <!-- Beginning of quotes card -->
     <div class="row" data-masonry='{"percentPosition": true }' style="box-sizing: border-box; padding-bottom: 30px;">
 
 
       <!-- First Quote Begin -->
-      <div class="col-sm-6 col-lg-4 mb-4">
-        <div class="card">
-          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
-            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=118237"
-            alt="random image">
-          <div class="card-body">
-            <h5 class="card-title" id="random_quote0"></h5>
-            <br>
-            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author0"></figcaption>
+      <template id="quotesCardTemplate">
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
+              preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=118237"
+              alt="random image">
+            <div class="card-body">
+              <h5 class="card-title" id="random_quote0"></h5>
+              <br>
+              <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
+                id="random_author0">
+              </figcaption>
+              <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
+            </div>
           </div>
         </div>
-      </div>
+      </template>
       <!-- First Quote End -->
 
 
@@ -103,7 +118,10 @@
           <div class="card-body">
             <h5 class="card-title" id="random_quote1"></h5>
             <br>
-            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author1"></figcaption>
+            <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
+              id="random_author1">
+            </figcaption>
+            <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
           </div>
         </div>
       </div>
@@ -119,7 +137,10 @@
           <div class="card-body">
             <h5 class="card-title" id="random_quote2"></h5>
             <br>
-            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author2"></figcaption>
+            <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
+              id="random_author2">
+            </figcaption>
+            <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
           </div>
         </div>
       </div>
@@ -134,7 +155,10 @@
           <div class="card-body">
             <h5 class="card-title" id="random_quote3"></h5>
             <br>
-            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author3"></figcaption>
+            <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
+              id="random_author3">
+            </figcaption>
+            <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
           </div>
         </div>
       </div>
@@ -150,7 +174,10 @@
           <div class="card-body">
             <h5 class="card-title" id="random_quote4"></h5>
             <br>
-            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author4"></figcaption>
+            <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
+              id="random_author4">
+            </figcaption>
+            <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
           </div>
         </div>
       </div>
@@ -166,7 +193,10 @@
           <div class="card-body">
             <h5 class="card-title" id="random_quote5"></h5>
             <br>
-            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author5"></figcaption>
+            <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
+              id="random_author5">
+            </figcaption>
+            <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
           </div>
         </div>
       </div>
@@ -182,7 +212,10 @@
           <div class="card-body">
             <h5 class="card-title" id="random_quote6"></h5>
             <br>
-            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author6"></figcaption>
+            <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
+              id="random_author6">
+            </figcaption>
+            <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
           </div>
         </div>
       </div>
@@ -198,7 +231,10 @@
           <div class="card-body">
             <h5 class="card-title" id="random_quote7"></h5>
             <br>
-            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author7"></figcaption>
+            <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
+              id="random_author7">
+            </figcaption>
+            <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
           </div>
         </div>
       </div>
@@ -214,7 +250,10 @@
           <div class="card-body">
             <h5 class="card-title" id="random_quote8"></h5>
             <br>
-            <figcaption class="blockquote-footer mb-0 text-muted" id="random_author8"></figcaption>
+            <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
+              id="random_author8">
+            </figcaption>
+            <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
           </div>
         </div>
       </div>

@@ -41,14 +41,21 @@
     <!-- Your HTML Layout go here -->
     <!------------------------------>
     <nav id="navbarPlaceholder"></nav>
-    <div class="container text-center py-3">
-        <img id="mypic-goes-here" src="images/blah.jpg" width=50 height=50 />
-        <input type="file" id="mypic-input" accept="image/*" />
-    </div>
+
     <div class="container">
         <h1>User Profile </h1>
         <form class="row g-3 justify-content-center">
             <fieldset id="personalInfoFields" disabled>
+                <!-- <div class="container text-center py-3">
+                    <img id="mypic-goes-here" src="images/blah.jpg" width=50 height=50 />
+                    <input type="file" id="mypic-input" accept="image/*" />
+                </div> -->
+                <div class="form-group py-5">
+                    <div id="profile-container">
+                        <img id="mypic-goes-here" src="" width=50 height=50 />
+                    </div>
+                    <input id="mypic-input" type="file" accept="image/*">
+                </div>
                 <div class="col-md-12">
                     <label for="inputFirstName" class="form-label">First Name</label>
                     <input type="Name" class="form-control" id="inputFirstName">

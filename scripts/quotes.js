@@ -26,8 +26,25 @@
 // }
 // $(document).ready(setup);
 
+var currentUser;
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        currentUser = db.collection("users").doc(user.uid);   //global
+        console.log(currentUser);
+
+        // the following functions are always called when someone is logged in
+        displayQuotes();
+    } else {
+        // No user is signed in.
+        console.log("No user is signed in");
+        window.location.href = "login.html";
+    }
+});
+
 // this function retrieves the data from firestore and populates it into html using peudo randomizer
 function displayQuotes() {
+    // let quotesCardTemplate = document.getElementById("quotesCardTemplate");  //card template
+    // let quotesCardGroup = document.getElementById("quotesCardGroup");   //where to append card
     // initializing these values for a function later
     let random_int = Math.floor(Math.random() * 74);
     let x = 0
@@ -41,6 +58,8 @@ function displayQuotes() {
                 x++
                 if (x == random_int) {
 
+                    var quotesID = doc.data().code; //gets the unique ID fields
+                    console.log(quotesID)
                     var quote = doc.data().quote;
                     var author = doc.data().author;
                     // these codes allow the values from firestore to be injected in html
@@ -50,6 +69,16 @@ function displayQuotes() {
 
                     random_int++
                     y++
+                    // let testQuoteCard = quotesCardTemplate.content.cloneNode(true);
+                    // //next 2 lines are new for demo#11
+                    // //this line sets the id attribute for the <i> tag in the format of "save-hikdID" 
+                    // //so later we know which hike to bookmark based on which hike was clicked
+                    // testQuoteCard.querySelector('i').id = 'save-' + quotesID;
+                    // // this line will call a function to save the hikes to the user's document             
+                    // testQuoteCard.querySelector('i').onclick = () => saveBookmark(quotesID);
+
+                    // // testQuoteCard.querySelector('img').src = `./images/${quotesID}.jpg`;
+                    // quotesCardGroup.appendChild(testQuoteCard);
                 }
             })
         })

@@ -1,0 +1,14 @@
+.circular_image img {
+    width: 100%;
+}
+
+.circular_image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}

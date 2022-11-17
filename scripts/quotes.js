@@ -55,3 +55,18 @@ function displayQuotes() {
         })
 }
 displayQuotes();
+
+function saveBookmark(quoteID) {
+    currentUser.set({
+        bookmarks: firebase.firestore.FieldValue.arrayUnion(quoteID)
+    }, {
+        merge: true
+    })
+        .then(function () {
+            console.log("bookmark has been saved for: " + currentUser);
+            var iconID = 'save-' + quoteID;
+            //console.log(iconID);
+            //this is to change the icon of the hike that was saved to "filled"
+            document.getElementById(iconID).innerText = 'bookmark';
+        });
+}

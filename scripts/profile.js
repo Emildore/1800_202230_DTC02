@@ -7,15 +7,17 @@ function chooseFileListener() {
 
     //attach listener to input file
     //when this file changes, do something
-    fileInput.addEventListener('change', function (e) {
+    if (fileInput) {
+        fileInput.addEventListener('change', function (e) {
 
-        //the change event returns a file "e.target.files[0]"
-        ImageFile = e.target.files[0];
-        var blob = URL.createObjectURL(ImageFile);
+            //the change event returns a file "e.target.files[0]"
+            ImageFile = e.target.files[0];
+            var blob = URL.createObjectURL(ImageFile);
 
-        //change the DOM img element source to point to this file
-        image.src = blob;    //assign the "src" property of the "img" tag
-    })
+            //change the DOM img element source to point to this file
+            image.src = blob;    //assign the "src" property of the "img" tag
+        })
+    }
 }
 chooseFileListener();
 
@@ -23,6 +25,8 @@ chooseFileListener();
 function saveUserInfo() {
     firebase.auth().onAuthStateChanged(function (user) {
         var storageRef = storage.ref("images/" + user.uid + ".jpg");
+        console.log("storageRef: " + storageRef);
+        console.log("ImageFile: " + ImageFile);
 
         //Asynch call to put File Object (global variable ImageFile) onto Cloud
         storageRef.put(ImageFile)

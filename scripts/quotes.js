@@ -85,24 +85,15 @@ function displayQuotes() {
 }
 displayQuotes();
 
-// function setHikeData(id) {
-//     localStorage.setItem('hikeID', id);
-// }
-
-//-----------------------------------------------------------------------------
-// This function is called whenever the user clicks on the "bookmark" icon.
-// It adds the hike to the "bookmarks" array
-// Then it will change the bookmark icon from the hollow to the solid version.
-//-----------------------------------------------------------------------------
-function saveBookmark(quotesID) {
+function saveBookmark(quoteID) {
     currentUser.set({
-        bookmarks: firebase.firestore.FieldValue.arrayUnion(quotesID)
+        bookmarks: firebase.firestore.FieldValue.arrayUnion(quoteID)
     }, {
         merge: true
     })
         .then(function () {
             console.log("bookmark has been saved for: " + currentUser);
-            var iconID = 'save-' + quotesID;
+            var iconID = 'save-' + quoteID;
             //console.log(iconID);
             //this is to change the icon of the hike that was saved to "filled"
             document.getElementById(iconID).innerText = 'bookmark';

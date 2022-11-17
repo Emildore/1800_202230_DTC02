@@ -64,236 +64,41 @@
   <!-- Source of this bootstrap: https://getbootstrap.com/docs/5.2/examples/masonry/ -->
   <main class="container py-5">
 
-
-    <h1>Motivational Quotes</h1>
-    <p class="lead">
-      Here are some quotes to help you if you're feeling blue.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis rerum
-      culpa accusantium expedita et laudantium, maxime impedit doloremque
-      quos. Nisi maiores maxime magnam iure? Fugit quia enim ad exercitationem
-      corporis?
-    </p>
-    <hr class="my-5" />
-
     <div class="container">
-      <h1>Some popular hikes</h1>
+      <h1>Motivational Quotes</h1>
+      <p class="lead">
+        Here are some quotes to help you if you're feeling blue.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis rerum
+        culpa accusantium expedita et laudantium, maxime impedit doloremque
+        quos. Nisi maiores maxime magnam iure? Fugit quia enim ad exercitationem
+        corporis?
+      </p>
+      <hr class="my-5" />
       <!-- Here is container for cards  -->
       <div class="container">
-        <div id="quotesCardGroup" class="row row-cols-auto">
+        <div id="quoteCardGroup" class="row row-cols-auto">
         </div>
       </div>
     </div>
+
     <!-- Beginning of quotes card -->
-    <div class="row" data-masonry='{"percentPosition": true }' style="box-sizing: border-box; padding-bottom: 30px;">
 
-
-      <!-- First Quote Begin -->
-      <template id="quotesCardTemplate">
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="card">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
-              preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=118237"
-              alt="random image">
-            <div class="card-body">
-              <h5 class="card-title" id="random_quote0"></h5>
-              <br>
-              <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
-                id="random_author0">
-              </figcaption>
-              <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
-            </div>
-          </div>
-          <i class="material-icons">bookmark_border</i>
-        </div>
-      </template>
-      <!-- First Quote End -->
-
-
-      <!-- Second Quote Begin -->
-      <div class="col-sm-6 col-lg-4 mb-4">
-        <div class="card">
-          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
-            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=118231"
-            alt="random image">
-          <div class="card-body">
-            <h5 class="card-title" id="random_quote1"></h5>
-            <br>
-            <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
-              id="random_author1">
-            </figcaption>
-            <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
-          </div>
-          <i class="material-icons">bookmark_border</i>
-        </div>
-      </div>
-      <!-- Second Quote End -->
-
-
-      <!-- Third Quote Begin -->
-      <div class="col-sm-6 col-lg-4 mb-4">
-        <div class="card">
-          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
-            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=118238"
-            alt="random image">
-          <div class="card-body">
-            <h5 class="card-title" id="random_quote2"></h5>
-            <br>
-            <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
-              id="random_author2">
-            </figcaption>
-            <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
-          </div>
-          <i class="material-icons">bookmark_border</i>
-        </div>
-      </div>
-      <!-- Third Quote End -->
-
-      <!-- Fourth Quote Begin -->
-      <div class="col-sm-6 col-lg-4 mb-4">
-        <div class="card">
-          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
-            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=1108239"
-            alt="random image">
-          <div class="card-body">
-            <h5 class="card-title" id="random_quote3"></h5>
-            <br>
-            <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
-              id="random_author3">
-            </figcaption>
-            <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
-          </div>
-          <i class="material-icons">bookmark_border</i>
-        </div>
-      </div>
-      <!-- Fourth Quote End -->
-
-
-      <!-- Fifth Quote Begin -->
-      <div class="col-sm-6 col-lg-4 mb-4">
-        <div class="card">
-          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
-            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=118344239"
-            alt="random image">
-          <div class="card-body">
-            <h5 class="card-title" id="random_quote4"></h5>
-            <br>
-            <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
-              id="random_author4">
-            </figcaption>
-            <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
-          </div>
-          <i class="material-icons">bookmark_border</i>
-        </div>
-      </div>
-      <!-- Fifth Quote End -->
-
-
-      <!-- Sixth Quote Begin -->
-      <div class="col-sm-6 col-lg-4 mb-4">
-        <div class="card">
-          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
-            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=118243539"
-            alt="random image">
-          <div class="card-body">
-            <h5 class="card-title" id="random_quote5"></h5>
-            <br>
-            <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
-              id="random_author5">
-            </figcaption>
-            <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
-          </div>
-          <i class="material-icons">bookmark_border</i>
-        </div>
-      </div>
-      <!-- Sixth Quote Begin -->
-
-
-      <!-- Seventh Quote Begin -->
-      <div class="col-sm-6 col-lg-4 mb-4">
-        <div class="card">
-          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
-            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=114358239"
-            alt="random image">
-          <div class="card-body">
-            <h5 class="card-title" id="random_quote6"></h5>
-            <br>
-            <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
-              id="random_author6">
-            </figcaption>
-            <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
-          </div>
-          <i class="material-icons">bookmark_border</i>
-        </div>
-      </div>
-      <!-- Seventh Quote End -->
-
-
-      <!-- Eighth Quote Begin -->
-      <div class="col-sm-6 col-lg-4 mb-4">
-        <div class="card">
-          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
-            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=11823956"
-            alt="random image">
-          <div class="card-body">
-            <h5 class="card-title" id="random_quote7"></h5>
-            <br>
-            <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
-              id="random_author7">
-            </figcaption>
-            <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
-          </div>
-          <i class="material-icons">bookmark_border</i>
-        </div>
-      </div>
-      <!-- Eighth Quote End -->
-
-
-      <!-- Ninth Quote Begin -->
-      <div class="col-sm-6 col-lg-4 mb-4">
-        <div class="card">
-          <img class="bd-placeholder-img card-img-top" width="100%" height="200" aria-label="Placeholder: Image cap"
-            preserveAspectRatio="xMidYMid slice" focusable="false" src="https://picsum.photos/300/200?random=1182347"
-            alt="random image">
-          <div class="card-body">
-            <h5 class="card-title" id="random_quote8"></h5>
-            <br>
-            <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
-              id="random_author8">
-            </figcaption>
-            <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
-          </div>
-          <i class="material-icons">bookmark_border</i>
-        </div>
-      </div>
-      <!-- Ninth Quote End -->
-
-
-
-      <!-- sample code card -->
-      <!-- <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
-          role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image
-            cap</text>
-        </svg>
-
+    <template id="quoteCardTemplate">
+      <div class=" card" style="width: calc(95% / 3);float: left; margin: 5px; box-sizing: border-box;">
+        <img class="card-img-top" width="100%" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice"
+          focusable="false" src="https://picsum.photos/300/200?random=118237" alt="random image">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          <figcaption class="blockquote-footer mb-0 text-muted">
-            Someone famous
+          <h5 class="quotes">placeholder</h5>
+          <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
+            class="authors">
+            <span class="authors">placeholder</span>
           </figcaption>
+          <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
         </div>
       </div>
-    </div> -->
-
-
-
-    </div>
+    </template>
     <!-- End of quotes card -->
 
   </main>

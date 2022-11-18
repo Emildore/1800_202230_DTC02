@@ -32,11 +32,8 @@
   <!-- Other libraries go here -->
 
   <!-- Link to styles of your own -->
-  <link rel="stylesheet" href="./styles/style.css">
+  <!-- <link rel="stylesheet" href="./styles/style.css"> -->
   <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/masonry/" />
-  <!-- Google Icons (Material Design)-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 
   <link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
@@ -49,7 +46,6 @@
   <link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9" />
   <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico" />
   <meta name="theme-color" content="#712cf9" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -65,16 +61,11 @@
   <main class="container py-5">
 
     <div class="container">
-      <h1>Motivational Quotes</h1>
+      <h1>Favourite Quotes</h1>
       <p class="lead">
-        Here are some quotes to help you if you're feeling blue.
+        Here are some quotes that you favourited.
       </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis rerum
-        culpa accusantium expedita et laudantium, maxime impedit doloremque
-        quos. Nisi maiores maxime magnam iure? Fugit quia enim ad exercitationem
-        corporis?
-      </p>
+
       <hr class="my-5" />
       <!-- Here is container for cards  -->
       <div class="container">
@@ -82,9 +73,7 @@
         </div>
       </div>
     </div>
-
     <!-- Beginning of quotes card -->
-
     <template id="quoteCardTemplate">
       <div class=" card" style="width: calc(95% / 3);float: left; margin: 5px; box-sizing: border-box;">
         <img class="card-img-top" width="100%" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice"
@@ -95,7 +84,6 @@
             class="authors">
             <span class="authors">placeholder</span>
           </figcaption>
-          <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
         </div>
       </div>
     </template>
@@ -119,7 +107,7 @@
 
   <!-- Link to scripts of your own -->
   <script src="./scripts/firebaseAPI_DTC02.js"></script>
-  <script src="./scripts/quotes.js"></script>
+  <script src="./scripts/favourited.js"></script>
   <script src="./scripts/skeleton.js"></script>
 </body>
 

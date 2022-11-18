@@ -4,14 +4,13 @@ function writeTasks () {
           console.log(user.uid);
           console.log("Task Created");
           alert("Adding Task...");
-          var tasksRef = db.collection("users").doc(user.uid).collection("tasks");
+          let Taskname = document.getElementById("taskname").value;
+          let Month = document.getElementById("datemonth").value;
+          let Day = document.getElementById("dateday").value;
+          let Notes = document.getElementById("notes").value;
+          var tasksRef = db.collection("users").doc(user.uid).collection("tasks").doc(Taskname);
         
-            let Taskname = document.getElementById("taskname").value;
-            let Month = document.getElementById("datemonth").value;
-            let Day = document.getElementById("dateday").value;
-            let Notes = document.getElementById("notes").value;
-        
-            tasksRef.add({
+            tasksRef.set({
         
               taskname: Taskname,
               month: Month,

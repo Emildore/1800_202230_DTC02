@@ -1,5 +1,5 @@
 let taskID = localStorage.getItem("taskID");
-console.log(localStorage)
+console.log(taskID)
 
 function populateInfo() {
             firebase.auth().onAuthStateChanged(user => {
@@ -7,9 +7,11 @@ function populateInfo() {
                 if (user) {
 
                     //go to the correct task document by referencing to the user uid
-                    db.collection("users").doc(user.uid).collection("tasks").where("taskname", "==", taskID)
+                    db.collection("users").doc(user.uid).collection("tasks")
                     .get()
-                        .then(userTasks => {
+                        .then(allTasks => {
+                          allTasks.forEach(currentTask => {
+                            if (currentTask)
                             var Taskname = userTasks.data().taskname;
                             var Month = userTasks.data().month;
                             var Day = userTasks.data().day;
@@ -28,6 +30,7 @@ function populateInfo() {
                             if (Notes != null) {
                                 document.getElementById("notes").value = Notes;
                             }
+                          });
                         })
                 } else {
                     // No user is signed in.

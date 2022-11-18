@@ -1,14 +1,15 @@
-function readQuote() {
-    db.collection("workouts").doc("ONzG4fYD0U7HINn7wFO0")                                                      //name of the collection and documents should matach excatly with what you have in Firestore
-        .onSnapshot(somedoc => {                                                               //arrow notation
-            console.log("current document data: " + somedoc.data());                          //.data() returns data object
-            document.getElementById("perf-goes-here").innerHTML = somedoc.data().performance;      //using javascript to display the data on the right place
-            document.getElementById("exercises-goes-here").innerHTML = somedoc.data().exercises;
-            document.getElementById("date-goes-here").innerHTML = somedoc.data().date;
-            document.getElementById("type-goes-here").innerHTML = somedoc.data().type;
-            //Here are other ways to access key:value data fields
-            //$('#quote-goes-here').text(tuesdayDoc.data().quote);                                       //using jquery object dot notation
-            //$("#quote-goes-here").text(tuesdayDoc.data()["quote"]);                                    //using json object indexing
+function readWorkouts() {
+
+
+    db.collection("workouts").get()
+        .then(allWorkouts => {
+            allWorkouts.forEach(somedoc => {
+                document.getElementById("perf-goes-here").insertAdjacentHTML("afterend", somedoc.data().performance + '<br>');      //using javascript to display the data on the right place
+                document.getElementById("exercises-goes-here").insertAdjacentHTML("afterend", somedoc.data().exercises + '<br>')
+                document.getElementById("date-goes-here").insertAdjacentHTML("afterend", somedoc.data().date + '<br>')
+                document.getElementById("type-goes-here").insertAdjacentHTML("afterend", somedoc.data().type + '<br>')
+            })
+
         })
 }
-readQuote();        //calling the function
+readWorkouts();        //calling the function

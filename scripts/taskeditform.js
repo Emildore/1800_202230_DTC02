@@ -7,11 +7,9 @@ function populateInfo() {
                 if (user) {
 
                     //go to the correct task document by referencing to the user uid
-                    db.collection("users").doc(user.uid).collection("tasks")
-                    .get()
-                        .then(allTasks => {
-                          allTasks.forEach(currentTask => {
-                            if (currentTask)
+                    Task = db.collection("users").doc(user.uid).collection("tasks").doc(taskID);
+                    Task.get()
+                        .then(userTasks => {
                             var Taskname = userTasks.data().taskname;
                             var Month = userTasks.data().month;
                             var Day = userTasks.data().day;
@@ -30,7 +28,6 @@ function populateInfo() {
                             if (Notes != null) {
                                 document.getElementById("notes").value = Notes;
                             }
-                          });
                         })
                 } else {
                     // No user is signed in.
@@ -42,18 +39,30 @@ function populateInfo() {
 //call the function to run it 
 populateInfo();
 
-function saveUserInfo() {
-  userName = document.getElementById('nameInput').value;       
-  userSchool = document.getElementById('schoolInput').value;     
-  userCity = document.getElementById('cityInput').value;       
+function saveTaskInfo() {
+  Taskname = document.getElementById("taskname").value;
+  Month = document.getElementById("datemonth").value;
+  Day = document.getElementById("dateday").value;
+  Notes = document.getElementById("notes").value;      
   Task.update({
-                      name: userName,
-                      school: userSchool,
-                      city: userCity
+                      taskname: Taskname,
+                      month: Month,
+                      day: Day,
+                      notes: Notes,
+                      last_updated: firebase.firestore.FieldValue.serverTimestamp() 
                   })
                   .then(() => {
-                      console.log("Document successfully updated!");
+                      alert("Task successfully updated!");
+                      setTimeout(gototodolist, 1000)
                   })
-  
-  document.getElementById('personalInfoFields').disabled = true;
 }
+
+function gototodolist () {
+  window.location.href = "../todolist.html";
+}
+
+function setup () {
+  $("#savetask").click(saveTaskInfo)
+}
+
+$(document).ready(setup);

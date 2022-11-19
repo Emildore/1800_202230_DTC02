@@ -12,4 +12,20 @@ function readWorkouts() {
 
         })
 }
+
+function writeWorkout() {
+    let Type = document.getElementById("type").value;
+    let Date = document.getElementById("date").value;
+    let Exercise = document.getElementById("exercise").value;
+    let Performance = document.getElementById("performance").value;
+
+    db.collection("workouts").add({
+        type: Type,
+        date: Date,
+        exercises: Exercise,
+        performance: Performance
+
+    })
+}
+
 readWorkouts();        //calling the function

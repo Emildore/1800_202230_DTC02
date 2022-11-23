@@ -11,6 +11,7 @@ function displayCards(collection) {
                       var month = doc.data().month;  
                       var day = doc.data().day;
                       var notes = doc.data().notes;
+                      var priority = doc.data().priority
                       let newcard = cardTemplate.content.cloneNode(true);
       
                       //update title and text and image
@@ -20,7 +21,7 @@ function displayCards(collection) {
                       newcard.querySelector('.notes').innerHTML = notes;
                       newcard.querySelector('a').onclick = () => setTaskData(taskname);
                       newcard.querySelector('button').onclick = () => {setTaskData(taskname)
-                        console.log("Delete")
+                        // console.log("Delete")
                       if (confirm('Do you want to delete this task?')) {
                         // do delete item
                         db.collection("users").doc(user.uid).collection(collection).doc(localStorage.getItem("taskID")).delete();
@@ -35,7 +36,11 @@ function displayCards(collection) {
                       newcard.querySelector('.notes').setAttribute("id", "cnotes" + i);
       
                       //attach to gallery
-                      document.getElementById(collection + "-go-here").appendChild(newcard);
+                      if (priority == true) {
+                        document.getElementById("priorities").appendChild(newcard);
+                      } else {
+                        document.getElementById(collection + "-go-here").appendChild(newcard);
+                      }
                       i++;   //if you want to use commented out section
                   })
               })
@@ -53,15 +58,6 @@ function setTaskData(id){
 
 function gototodolist () {
   window.location.href = "../todolist.html";
-}
-
-function deleteHandler () {
-  console.log("Delete")
-  if (confirm('Do you want to delete this task?')) {
-    // do delete item
-    db.collection("users").doc(user.uid).collection(collection).doc(taskID).delete();
-  }
-  setTimeout(gototodolist, 1000)
 }
 
 displayCards("tasks")

@@ -8,6 +8,13 @@ function writeTasks () {
           let Month = document.getElementById("datemonth").value;
           let Day = document.getElementById("dateday").value;
           let Notes = document.getElementById("notes").value;
+          if ($('#priority').is(":checked"))
+            {
+              // it is checked
+              Priority = true
+            } else {
+              Priority = false
+            }
           var tasksRef = db.collection("users").doc(user.uid).collection("tasks").doc(Taskname);
         
             tasksRef.set({
@@ -16,6 +23,7 @@ function writeTasks () {
               month: Month,
               day: Day,
               notes: Notes,
+              priority: Priority,
               last_updated: firebase.firestore.FieldValue.serverTimestamp() 
               
             });

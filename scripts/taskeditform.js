@@ -14,6 +14,7 @@ function populateInfo() {
                             var Month = userTasks.data().month;
                             var Day = userTasks.data().day;
                             var Notes = userTasks.data().notes;
+                            var Priority = userTasks.data().priority;
 
                             //if the data fields are not empty, then write them in to the form.
                             if (Taskname != null) {
@@ -27,6 +28,9 @@ function populateInfo() {
                             }
                             if (Notes != null) {
                                 document.getElementById("notes").value = Notes;
+                            }
+                            if (Priority == true) {
+                                document.getElementById("priority").checked = true;
                             }
                         })
                 } else {
@@ -43,12 +47,20 @@ function saveTaskInfo() {
   Taskname = document.getElementById("taskname").value;
   Month = document.getElementById("datemonth").value;
   Day = document.getElementById("dateday").value;
-  Notes = document.getElementById("notes").value;      
+  Notes = document.getElementById("notes").value; 
+  if ($('#priority').is(":checked"))
+            {
+              // it is checked
+              Priority = true
+            } else {
+              Priority = false
+            }     
   Task.update({
                       taskname: Taskname,
                       month: Month,
                       day: Day,
                       notes: Notes,
+                      priority: Priority,
                       last_updated: firebase.firestore.FieldValue.serverTimestamp() 
                   })
                   .then(() => {

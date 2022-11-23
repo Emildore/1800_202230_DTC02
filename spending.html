@@ -28,7 +28,7 @@
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
     <style>
-        * {
+        /* * {
             box-sizing: border-box;
         }
 
@@ -121,6 +121,13 @@
 
         #footer {
             clear: both;
+        } */
+
+        #top_img {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            height: 120px;
+            width: 70px
         }
     </style>
 </head>
@@ -131,10 +138,33 @@
 
     <div id="header" style="text-align: center;">
         <h1 style="margin-bottom: 15px;">Spending</h1>
-        <img src="images/coins1.jpg">
-        <img src="images/coins2.jpg" style="margin-left: 50px;">
-        <img src="images/coins3.jpg" style="margin-left: 50px;">
+        <img src="images/coins1.jpg" id="top_img">
+        <img src="images/coins2.jpg" style="margin-left: 50px;" id="top_img">
+        <img src="images/coins3.jpg" style="margin-left: 50px;" id="top_img">
         <hr width="100%">
+    </div>
+
+    <div class="container">
+        <br>
+        <h1>Add Spending</h1>
+        <br>
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Date</label>
+                <input type="date" id="date" name="birthday" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Type</label>
+                <input type="text" class="form-control" id="type" placeholder="ex: Coffee">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Amount</label>
+                <input type="text" class="form-control" id="amount" placeholder="ex: 5">
+            </div><br>
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-lg btn-primary pull-right" onclick="writeWorkout()">Submit</button>
+            </div>
+        </form>
     </div>
 
     <div class="card">

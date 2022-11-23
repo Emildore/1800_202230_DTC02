@@ -6,7 +6,7 @@ function populateInfo() {
                 // Check if user is signed in:
                 if (user) {
 
-                    //go to the correct task document by referencing to the user uid
+                    //go to the correct task collection by referencing to the user uid then the task id
                     Task = db.collection("users").doc(user.uid).collection("tasks").doc(taskID);
                     Task.get()
                         .then(userTasks => {

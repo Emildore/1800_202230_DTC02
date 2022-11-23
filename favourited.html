@@ -32,8 +32,12 @@
 
   <!-- Other libraries go here -->
 
+  <!-- Google Icons (Material Design)-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   <!-- Link to styles of your own -->
-  <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/quotes.css">
   <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/masonry/" />
 
   <link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -62,9 +66,9 @@
   <main class="container py-5">
 
     <div class="container">
-      <h1>Favourite Quotes</h1>
+      <h1>Saved Quotes</h1>
       <p class="lead">
-        Here are some quotes that you favourited.
+        Here are some quotes that you saved.
       </p>
 
       <hr class="my-5" />
@@ -76,15 +80,17 @@
     </div>
     <!-- Beginning of quotes card -->
     <template id="quoteCardTemplate">
-      <div class=" card" style="width: calc(95% / 3);float: left; margin: 5px; box-sizing: border-box;">
-        <img class="card-img-top" width="100%" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice"
-          focusable="false" src="https://picsum.photos/300/200?random=118237" alt="random image">
+      <div class=" card card_style">
+        <!-- <img class="card-img-top" width="100%" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice"
+                  focusable="false" src="https://picsum.photos/300/200?random=118237" alt="random image"> -->
         <div class="card-body">
           <h5 class="quotes">placeholder</h5>
-          <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
-            class="authors">
+        </div>
+        <div class="container_format">
+          <figcaption class="blockquote-footer mb-0 text-muted display_author">
             <span class="authors">placeholder</span>
           </figcaption>
+          <i class="material-icons bookmark">bookmark_border</i>
         </div>
       </div>
     </template>

@@ -34,6 +34,7 @@
 
   <!-- Link to styles of your own -->
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/quotes.css">
   <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/masonry/" />
   <!-- Google Icons (Material Design)-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -66,16 +67,13 @@
   <main class="container py-5">
 
     <div class="container">
-      <h1>Motivational Quotes</h1>
-      <p class="lead">
-        Here are some quotes to help you if you're feeling blue.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis rerum
-        culpa accusantium expedita et laudantium, maxime impedit doloremque
-        quos. Nisi maiores maxime magnam iure? Fugit quia enim ad exercitationem
-        corporis?
-      </p>
+      <div class="p-4 p-md-5 mb-4 rounded text-bg-dark background_style">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 fst-italic">Motivational Quotes</h1>
+          <p class="lead my-3"> Here are some quotes to help you if you're feeling blue</p>
+          <!-- <p class="lead mb-0"><a href="./favourited.html" class="text-white fw-bold">Check saved quotes</a></p> -->
+        </div>
+      </div>
       <hr class="my-5" />
       <!-- Here is container for cards  -->
       <div class="container">
@@ -86,17 +84,19 @@
 
     <!-- Beginning of quotes card -->
 
+
     <template id="quoteCardTemplate">
-      <div class=" card" style="width: calc(95% / 3);float: left; margin: 5px; box-sizing: border-box;">
-        <img class="card-img-top" width="100%" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice"
-          focusable="false" src="https://picsum.photos/300/200?random=118237" alt="random image">
+      <div class=" card card_style">
+        <!-- <img class="card-img-top" width="100%" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice"
+          focusable="false" src="https://picsum.photos/300/200?random=118237" alt="random image"> -->
         <div class="card-body">
           <h5 class="quotes">placeholder</h5>
-          <figcaption style="display: inline; align-items: center;" class="blockquote-footer mb-0 text-muted"
-            class="authors">
+        </div>
+        <div class="container_format">
+          <figcaption class="blockquote-footer mb-0 text-muted display_author">
             <span class="authors">placeholder</span>
           </figcaption>
-          <i class="material-icons" style="display: inline; align-items: center; float: right;">bookmark_border</i>
+          <i class="material-icons bookmark">bookmark_border</i>
         </div>
       </div>
     </template>

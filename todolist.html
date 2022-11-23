@@ -26,6 +26,7 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
   <!-- Other libraries go here -->
@@ -54,7 +55,8 @@
 
 
   <template id="taskCardTemplate">
-    <div style="background-color: gainsboro; overflow: auto; border-radius: 25px; padding: 2%;box-sizing: border-box; margin-bottom: 20px;">
+    <div
+      style="background-color: gainsboro; overflow: auto; border-radius: 25px; padding: 2%;box-sizing: border-box; margin-bottom: 20px;">
       <div id="content" style="float: left; width: 85%; overflow: auto; box-sizing: border-box;">
         <h1 class="taskName" style="float: left;">
           Task Name
@@ -69,7 +71,8 @@
           </button>
         </div>
         <p class="notes" style="padding-top: 20px; margin: auto; width: 95% ; float: left;">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione corrupti optio facilis aspernatur aliquid amet
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione corrupti optio facilis aspernatur aliquid
+          amet
           quas
           sint officiis itaque quae!
         </p>

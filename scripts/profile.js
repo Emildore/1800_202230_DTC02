@@ -121,7 +121,7 @@ function populateInfo() {
                         console.log(picUrl);
                         // use this line if "mypicdiv" is a "div"
                         // $("#mypicdiv").append("<img src='" + picUrl + "'>")
-                        $("#mypic-goes-here").attr("src", picUrl);
+                        $("#mypic-goes-here-profile").attr("src", picUrl);
                     }
                     else
                         console.log("picURL is null");

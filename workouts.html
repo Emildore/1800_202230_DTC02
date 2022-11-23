@@ -26,9 +26,10 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
     <style>
-        * {
+        /* * {
             box-sizing: border-box;
         }
 
@@ -121,6 +122,13 @@
 
         #footer {
             clear: both;
+        } */
+
+        #topimage {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            height: 100%;
+            width: 150px
         }
     </style>
 </head>
@@ -129,14 +137,14 @@
 
     <nav id="navbarPlaceholder"></nav>
 
-    <div id="header" style="text-align: center;">
+    <!-- <div id="header" style="text-align: center;">
         <h1 style="margin-bottom: 15px;">Workouts</h1>
-        <img src="images/squats.jpg">
-        <img src="images/jogs.jpg">
-        <img src="images/cycling.jpg">
-        <img src="images/kettlebells.jpg">
-        <img src="images/jumprope.jpg">
-        <hr width="100%">
+        <img src="images/squats.jpg" id="topimage">
+        <img src="images/jogs.jpg" id="topimage">
+        <img src="images/cycling.jpg" id="topimage">
+        <img src="images/kettlebells.jpg" id="topimage">
+        <img src="images/jumprope.jpg" id="topimage">
+        <hr width="80%">
     </div>
 
     <div class="container">
@@ -201,7 +209,89 @@
                 </td>
             </tr>
         </table>
-    </div>
+    </div> -->
+
+    <main class="container py-5">
+
+        <div class="container">
+            <h1>Workouts</h1>
+            <p class="lead">
+                <img src="images/squats.jpg" id="topimage">
+                <img src="images/jogs.jpg" id="topimage">
+                <img src="images/cycling.jpg" id="topimage">
+                <img src="images/kettlebells.jpg" id="topimage">
+                <img src="images/jumprope.jpg" id="topimage">
+            </p>
+            <hr class="my-5" />
+
+            <div class="container">
+                <br>
+                <h1>Add Workout</h1>
+                <br>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Type</label>
+                        <input type="text" class="form-control" id="type" placeholder="ex: Weightlifting">
+                    </div><br>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Date</label>
+                        <input type="text" class="form-control" id="date" placeholder="ex: 01 Nov 2022">
+                    </div><br>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Exercise</label>
+                        <input type="text" class="form-control" id="exercise" placeholder="ex: Squats">
+                    </div><br>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Performance</label>
+                        <input type="text" class="form-control" id="performance"
+                            placeholder="ex: 150 lbs, 5 reps, 3 sets">
+                    </div><br>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-lg btn-primary pull-right"
+                            onclick="writeWorkout()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card">
+            <table>
+                <tr style="text-align: center;">
+                    <td>
+                        <h4>Type</h4>
+                        <hr id="table_rule">
+                    </td>
+                    <td>
+                        <h4>Date</h4>
+                        <hr id="table_rule">
+                    </td>
+                    <td>
+                        <h4>Exercises</h4>
+                        <hr id="table_rule">
+                    </td>
+                    <td style="width: 50%">
+                        <h4>Performance</h4>
+                        <hr id="table_rule">
+                    </td>
+                </tr>
+                <tr style="text-align: center;">
+                    <td>
+                        <p><span id='type-goes-here'></span></p>
+                    </td>
+                    <td>
+                        <p><span id='date-goes-here'></span></p>
+                    </td>
+                    <td>
+                        <p><span id='exercises-goes-here'></span></p>
+                    </td>
+                    <td style="width: 50%">
+                        <p><span id='perf-goes-here'></span></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </main>
 
     <nav id="footerPlaceholder"></nav>
 
@@ -209,6 +299,7 @@
     <!-- <script src="./scripts/script.js"></script> -->
     <script src="./scripts/skeleton.js"></script>
     <script src="./scripts/workouts.js"></script>
+    <script src="./scripts/nav.js"></script>
 
 </body>
 

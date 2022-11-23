@@ -68,6 +68,15 @@ function populateQuotesDynamically() {
 
                 // populate with images dynamically on sprint 4
                 // testQuoteCard.querySelector('img').src = `./images/${quoteID}.jpg`;
+
+                currentUser.get().then(userData => {
+                  //get the user name
+                  var bookmarks = userData.data().favouriteQuotes;
+                  console.log(bookmarks);
+                  if (bookmarks.includes(quoteID)) {
+                    document.getElementById('save-' + quoteID).innerText = 'bookmark';
+                  }
+ })
                 quoteCardGroup.appendChild(testQuoteCard);
             })
         })
@@ -88,7 +97,6 @@ function saveQuote(quoteID) {
         .then(function () {
             console.log("bookmark has been saved for: " + currentUser);
             var iconID = 'save-' + quoteID;
-            //console.log(iconID);
             //this is to change the icon of the hike that was saved to "filled"
             document.getElementById(iconID).innerText = 'bookmark';
         });

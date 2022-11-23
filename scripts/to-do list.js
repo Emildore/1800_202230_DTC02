@@ -19,6 +19,14 @@ function displayCards(collection) {
                       newcard.querySelector('.day').innerHTML = day;
                       newcard.querySelector('.notes').innerHTML = notes;
                       newcard.querySelector('a').onclick = () => setTaskData(taskname);
+                      newcard.querySelector('button').onclick = () => {setTaskData(taskname)
+                        console.log("Delete")
+                      if (confirm('Do you want to delete this task?')) {
+                        // do delete item
+                        db.collection("users").doc(user.uid).collection(collection).doc(localStorage.getItem("taskID")).delete();
+                        setTimeout(gototodolist, 1000)
+                        };
+                      }
       
                       //give unique ids to all elements for future use
                       newcard.querySelector('.taskName').setAttribute("id", "ctaskName" + i);
@@ -31,8 +39,11 @@ function displayCards(collection) {
                       i++;   //if you want to use commented out section
                   })
               })
+        } else {
+            // No user is signed in.
+            console.log ("No user is signed in");
         }
-      })
+    })
 }
 
 function setTaskData(id){
@@ -40,9 +51,17 @@ function setTaskData(id){
             console.log(localStorage)
 }
 
+function gototodolist () {
+  window.location.href = "../todolist.html";
+}
+
 function deleteHandler () {
   console.log("Delete")
-  db.collection('tasks').where("taskname", "==", taskname).delete();
+  if (confirm('Do you want to delete this task?')) {
+    // do delete item
+    db.collection("users").doc(user.uid).collection(collection).doc(taskID).delete();
+  }
+  setTimeout(gototodolist, 1000)
 }
 
 displayCards("tasks")

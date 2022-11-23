@@ -29,7 +29,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
     <style>
-        * {
+        /* * {
             box-sizing: border-box;
         }
 
@@ -122,6 +122,13 @@
 
         #footer {
             clear: both;
+        } */
+
+        #topimage {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            height: 100%;
+            width: 150px
         }
     </style>
 </head>
@@ -132,11 +139,11 @@
 
     <div id="header" style="text-align: center;">
         <h1 style="margin-bottom: 15px;">Workouts</h1>
-        <img src="images/squats.jpg">
-        <img src="images/jogs.jpg">
-        <img src="images/cycling.jpg">
-        <img src="images/kettlebells.jpg">
-        <img src="images/jumprope.jpg">
+        <img src="images/squats.jpg" id="topimage">
+        <img src="images/jogs.jpg" id="topimage">
+        <img src="images/cycling.jpg" id="topimage">
+        <img src="images/kettlebells.jpg" id="topimage">
+        <img src="images/jumprope.jpg" id="topimage">
         <hr width="100%">
     </div>
 
@@ -210,6 +217,7 @@
     <!-- <script src="./scripts/script.js"></script> -->
     <script src="./scripts/skeleton.js"></script>
     <script src="./scripts/workouts.js"></script>
+    <script src="./scripts/nav.js"></script>
 
 </body>
 

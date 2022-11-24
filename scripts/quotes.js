@@ -28,6 +28,34 @@
 // }
 // $(document).ready(setup);
 
+
+// var listImages = {}
+// setup = function () {
+//     $.ajax(
+//         {
+//             url: "https://picsum.photos/v2/list?page=6&limit=100",
+//             type: "GET",
+//             success: function (imageList) {
+//                 imageList.forEach(eachImage => {
+
+//                     //defining a variable for the collection i want to create in Firestore to populate data
+//                     var imageRef = db.collection("images");
+
+//                     imageRef.add({
+//                         image_link: eachImage.download_url, // adding the image url to Firestore
+//                         code: eachImage.id //adding the id to Firestore
+
+//                     });
+//                 });
+//             },
+//             error: function (error) {
+//                 console.log(error);
+//             }
+//         }
+//     )
+// }
+// $(document).ready(setup);
+
 var currentUser;
 firebase.auth().onAuthStateChanged(user => {
     if (user) {
@@ -68,20 +96,30 @@ function populateQuotesDynamically() {
 
                 // populate with images dynamically on sprint 4
                 // testQuoteCard.querySelector('img').src = `./images/${quoteID}.jpg`;
-
-                currentUser.get().then(userData => {
-                  //get the user name
-                  var bookmarks = userData.data().favouriteQuotes;
-                  console.log(bookmarks);
-                  if (bookmarks.includes(quoteID)) {
-                    document.getElementById('save-' + quoteID).innerText = 'bookmark';
-                  }
- })
                 quoteCardGroup.appendChild(testQuoteCard);
             })
         })
 }
-populateQuotesDynamically();
+
+// function populateImagesDynamically() {
+//     let imageCardTemplate = document.getElementById("imageCardTemplate");  //card template
+//     let imageCardGroup = document.getElementById("imageCardGroup");   //where to append card
+
+//     //doublecheck: is your Firestore collection called "hikes" or "Hikes"?
+//     db.collection("images").get()
+//         .then(allImages => {
+//             allImages.forEach(doc => {
+//                 var image = doc.data().image_link; //gets the name field
+//                 var imageID = doc.data().code; //gets the unique ID field
+//                 let testImageCard = imageCardTemplate.content.cloneNode(true);
+//                 testImageCard.querySelector('img').src = image;
+//                 testImageCard.querySelector('img').id = imageID;
+//                 testImageCard.querySelector('img').onclick = () => setQuoteData(imageID);
+
+//                 imageCardGroup.appendChild(testImageCard);
+//             })
+//         })
+// }
 
 function setQuoteData(id) {
     localStorage.setItem('quoteID', id);
@@ -97,6 +135,7 @@ function saveQuote(quoteID) {
         .then(function () {
             console.log("bookmark has been saved for: " + currentUser);
             var iconID = 'save-' + quoteID;
+            //console.log(iconID);
             //this is to change the icon of the hike that was saved to "filled"
             document.getElementById(iconID).innerText = 'bookmark';
         });

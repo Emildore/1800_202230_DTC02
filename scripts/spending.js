@@ -2,15 +2,6 @@
 
 function readSpending() {
 
-
-    // db.collection("spending").get()
-    //     .then(allSpending => {
-    //         allSpending.forEach(somedoc => {
-    //             document.getElementById("history-goes-here").insertAdjacentHTML("afterend", somedoc.data().history + '<br>')
-    //             document.getElementById("type-goes-here").insertAdjacentHTML("afterend", somedoc.data().type + '<br>')
-    //         })
-
-    //     })
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             var currentUser = db.collection("users").doc(user.uid)
@@ -43,11 +34,8 @@ function readSpending() {
                                         if (time_difference < ms_month) { this_month += int_value }
                                         if (time_difference > ms_month && time_difference < ms_two_months) { month_before += int_value }
                                     }
-                                    console.log(this_week, 'this_week2')
                                 })
-                                console.log(this_week, 'this_week3')
                             }).then(function () {
-                                console.log(this_week, 'this_week4444')
                                 document.getElementById("type-goes-here").insertAdjacentHTML("afterend", type + '<br>')
                                 document.getElementById("week-goes-here").insertAdjacentHTML("afterend", this_week + '<br>')
                                 document.getElementById("week-before-goes-here").insertAdjacentHTML("afterend", week_before + '<br>')
@@ -90,9 +78,9 @@ function writeSpending() {
             }, {
                 merge: true
             })
-            readSpending()
+
         } else {
             // No user is signed in.
         }
-    });
+    })
 }

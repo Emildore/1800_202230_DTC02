@@ -137,7 +137,7 @@
 
     <nav id="navbarPlaceholder"></nav>
 
-    <div id="header" style="text-align: center;">
+    <!-- <div id="header" style="text-align: center;">
         <h1 style="margin-bottom: 15px;">Spending</h1>
         <img src="images/coins1.jpg" id="top_img">
         <img src="images/coins2.jpg" style="margin-left: 50px;" id="top_img">
@@ -207,7 +207,88 @@
                 </td>
             </tr>
         </table>
-    </div>
+    </div> -->
+
+    <main class="container py-5">
+
+        <div class="container">
+            <h1>Add Spending</h1>
+            <p class="lead">
+                <img src="images/coins1.jpg" id="top_img">
+                <img src="images/coins2.jpg" style="margin-left: 50px;" id="top_img">
+                <img src="images/coins3.jpg" style="margin-left: 50px;" id="top_img">
+            </p>
+            <hr class="my-5" />
+
+            <div class="container">
+                <br>
+                <h1>Add Spending</h1>
+                <br>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Date</label>
+                        <input type="date" id="date" name="birthday" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Type</label>
+                        <input type="text" class="form-control" id="type" placeholder="ex: Coffee">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Amount</label>
+                        <input type="text" class="form-control" id="amount" placeholder="ex: 5">
+                    </div><br>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-lg btn-primary pull-right"
+                            onclick="writeSpending()">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card">
+                <table>
+                    <tr style="text-align: center;">
+                        <td>
+                            <h4>Type</h4>
+                            <hr id="table_rule">
+                        </td>
+                        <td>
+                            <h4>Past Week</h4>
+                            <hr id="table_rule">
+                        </td>
+                        <td>
+                            <h4>Week Before</h4>
+                            <hr id="table_rule">
+                        </td>
+                        <td>
+                            <h4>Past Month</h4>
+                            <hr id="table_rule">
+                        </td>
+                        <td>
+                            <h4>Month Before</h4>
+                            <hr id="table_rule">
+                        </td>
+                    </tr>
+                    <tr style="text-align: center;">
+                        <td style="width: 10%;">
+                            <p><span id='type-goes-here'></span></p>
+                        </td>
+                        <td>
+                            <p><span id='week-goes-here'></span></p>
+                        </td>
+                        <td>
+                            <p><span id='week-before-goes-here'></span></p>
+                        </td>
+                        <td>
+                            <p><span id='month-goes-here'></span></p>
+                        </td>
+                        <td>
+                            <p><span id='month-before-goes-here'></span></p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+    </main>
 
     <nav id="footerPlaceholder"></nav>
 

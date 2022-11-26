@@ -42,6 +42,7 @@ function writeWorkout() {
             // No user is signed in.
         }
     });
+    readWorkouts();
 }
 
 readWorkouts();        //calling the function

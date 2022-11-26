@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
     <title>My BCIT Project</title>
@@ -30,9 +30,37 @@
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
     <!-- Other libraries go here -->
-
+    <!-- FONTS from google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&family=Roboto+Mono:wght@100&display=swap"
+        rel="stylesheet">
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/index.css">
+
+    <style>
+        body {
+            /* background: url(./images/rennaisance.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover; */
+        }
+
+        .bg_color {
+            background-color: #a28e6e !important;
+        }
+
+        h1 {
+            color: #ffffff !important;
+        }
+
+        p {
+            color: #ffffff !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,17 +70,16 @@
     <!------------------------------>
     <nav id="navbarPlaceholder"></nav>
 
-    <div class="p-5 text-left bg-image rounded-3" style="
-      background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');">
-        <div class="container-fluid bg-dark text-light p-5">
-            <div class="container bg-dark p-5">
-                <h1 class="display-4">Hello, <span id="name-goes-here"></span></h1>
-                <hr>
-                <p id="intro">Quote of the day:</p>
-                <p id="quote"></p>
-                <p id="author"></p>
-            </div>
+    <div class="p-5 text-left bg-image rounded-3 align-middle">
+        <div class=" container-fluid text-light p-5 bg_color align-middle">
+            <!-- <div class="container bg-dark p-5"> -->
+            <h1 class="display-4">Hello, <span id="name-goes-here"></span></h1>
+            <hr>
+            <p id="intro">Quote of the day:</p>
+            <p id="quote"></p>
+            <p id="author"></p>
         </div>
+        <!-- </div> -->
     </div>
 
     <nav id="footerPlaceholder"></nav>

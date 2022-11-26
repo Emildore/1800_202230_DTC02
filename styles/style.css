@@ -21,13 +21,21 @@ font-family: 'Roboto Mono', monospace; */
 }
 
 
-/* .btn-primary {
+.btn-primary {
     color: #D4FCFC;
     font-size: 150%;
-    background-color: # 849CCC;
-    border-color: #26312D;
+    background-color: #a28e6e;
+    border-color: #a28e6e;
     border-width: thick
-} */    
+}   
+
+.btn-primary:hover {
+    color: #D4FCFC;
+    font-size: 150%;
+    background-color: #8b7a5d !important;
+    border-color: #8b7a5d;
+    border-width: thick
+}   
 
 .btn-secondary {
     color: #F5F5F5;
@@ -46,7 +54,7 @@ font-family: 'Roboto Mono', monospace; */
 }
 
 body {
-    background-color: #FFFFFF;
+    /* background-color: #eedadd; */
 }
 
 .btn-secondary {

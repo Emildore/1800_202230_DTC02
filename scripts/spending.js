@@ -35,22 +35,27 @@ function readSpending() {
                                         var time_difference = current_date.getTime() - somedoc.data().date
                                         console.log(current_date.getTime(), 'current ms')
                                         var int_value = parseInt(somedoc.data().amount)
-                                        if (time_difference < ms_week) { this_week += int_value }
-                                        if (ms_week < time_difference < ms_two_weeks) { week_before += int_value }
+                                        if (time_difference < ms_week) {
+                                            this_week += int_value;
+                                            console.log(this_week)
+                                        }
+                                        if (time_difference > ms_week && time_difference < ms_two_weeks) { week_before += int_value }
                                         if (time_difference < ms_month) { this_month += int_value }
-                                        if (ms_month < time_difference < ms_two_weeks) { month_before += int_value }
+                                        if (time_difference > ms_month && time_difference < ms_two_months) { month_before += int_value }
                                     }
                                     console.log(this_week, 'this_week2')
                                 })
                                 console.log(this_week, 'this_week3')
+                            }).then(function () {
+                                console.log(this_week, 'this_week4444')
+                                document.getElementById("type-goes-here").insertAdjacentHTML("afterend", type + '<br>')
+                                document.getElementById("week-goes-here").insertAdjacentHTML("afterend", this_week + '<br>')
+                                document.getElementById("week-before-goes-here").insertAdjacentHTML("afterend", week_before + '<br>')
+                                document.getElementById("month-goes-here").insertAdjacentHTML("afterend", this_month + '<br>')
+                                document.getElementById("month-before-goes-here").insertAdjacentHTML("afterend", month_before + '<br>')
                             })
-                        console.log(this_week, 'this_week4444')
-                        document.getElementById("type-goes-here").insertAdjacentHTML("afterend", type + '<br>')
-                        document.getElementById("week-goes-here").insertAdjacentHTML("afterend", this_week + '<br>')
-                        document.getElementById("week-before-goes-here").insertAdjacentHTML("afterend", week_before + '<br>')
-                        document.getElementById("month-goes-here").insertAdjacentHTML("afterend", this_month + '<br>')
-                        document.getElementById("month-before-goes-here").insertAdjacentHTML("afterend", month_before + '<br>')
                     }
+
                 })
 
         } else {
@@ -85,6 +90,7 @@ function writeSpending() {
             }, {
                 merge: true
             })
+            readSpending()
         } else {
             // No user is signed in.
         }

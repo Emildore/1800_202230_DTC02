@@ -47,59 +47,23 @@
 
     <!-- Other libraries go here -->
 
+
+    <!-- FONTS from google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/index.css">
+
     <style>
-        /* Custom default button */
-        .btn-secondary,
-        .btn-secondary:hover,
-        .btn-secondary:focus {
-            color: #333;
-            text-shadow: none;
-            /* Prevent inheritance from `body` */
-        }
-
-        /* Base structure*/
         body {
-            text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-            box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-        }
-
-        .cover-container {
-            max-width: 42em;
-        }
-
-
-        /*Header*/
-        .nav-masthead .nav-link {
-            color: rgba(255, 255, 255, .5);
-            border-bottom: .25rem solid transparent;
-        }
-
-        .nav-masthead .nav-link:hover,
-        .nav-masthead .nav-link:focus {
-            border-bottom-color: rgba(255, 255, 255, .25);
-        }
-
-        .nav-masthead .nav-link+.nav-link {
-            margin-left: 1rem;
-        }
-
-        .nav-masthead .active {
-            color: #fff;
-            border-bottom-color: #fff;
-        }
-
-        body {
-            background: url(./images/girlstudying.jpg) no-repeat center center fixed;
+            background: url(./images/womans2.jpg) no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-        }
-
-        p {
-            text-shadow: 1px 1px 2px black;
         }
     </style>
 </head>
@@ -123,59 +87,24 @@
             </div>
         </header>
 
-        <main class="px-3">
+        <main class="px-3 transparent">
             <h1>MOTI</h1>
-            <p class="lead">Our team, DTC02, is developing a web application to help anybody garner motivation by
-                generating positive momentum and giving positive affirmations.</p>
-            <p class="lead" style="font-size: medium;">Whether you're going through hard times, need an extra help to
-                get stuff done, our app can help structure your lifestyle and habits.</p>
+            <!-- <p class="lead">Our team, DTC02, is developing a web application to help anybody garner
+                motivation by
+                generating positive momentum and giving positive affirmations.</p> -->
+            <p class="lead">Whether you're going through hard times, or need an extra help to
+                get stuff done, our habit tracker can help structure your lifestyle.</p>
             <p class="lead">
-                <a href="./login.html" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Login</a>
+                <a href="./login.html" class="btn btn-lg btn-secondary fw-bold">Sign Up</a>
+                <!-- <a href="./login.html" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Login</a> -->
             </p>
+            <p class="lead" style="font-size: small;">Returning user? <a href="./login.html">Sign In</a></p>
         </main>
 
         <footer class="mt-auto text-white-50">
-            <!-- <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a
-                    href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p> -->
+            <p>© 2022 BCIT COMP1800 Creations</a>.</p>
         </footer>
     </div>
-
-
-    <!-- <nav class="py-3 mb-3 border-bottom">
-        <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
-            <div>
-                <img src="images/Motivation Logo.png">
-                <svg class="bi me-2" width="40" height="32">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-                </a>
-            </div>
-
-            <div class="d-flex justify-content-end">
-                <a href="login.html"><button type="button" class="btn btn-outline-dark me-2">Login</button>
-                </a>
-            </div>
-        </div>
-    </nav> -->
-
-    <!-- <div class="p-5 text-left bg-image rounded-3" style="
-      background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');">
-        <div class="container-fluid py-5">
-            <div class="text-white">
-                <h1 class="display-5 fw-bold">Motivation App</h1>
-                <p class="col-md-8 fs-4">Our team, DTC02, is developing a web application to help anybody
-                    garner
-                    motivation by
-                    generating positive momentum and
-                    giving positive affirmations.</p>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- <nav id="footerPlaceholder"></nav> -->
-
-
-
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->

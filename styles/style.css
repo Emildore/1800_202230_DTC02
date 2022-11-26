@@ -1,3 +1,58 @@
-.material-icons{
+.material-icons {
     cursor: pointer;
+}
+
+.bg-info {
+    background-color: #849CCC !important;
+}
+
+.navbar-light .navbar-brand {
+    color: #D4FCFC;
+}
+
+/* .btn-primary {
+    color: #D4FCFC;
+    font-size: 150%;
+    background-color: #849CCC;
+    border-color: #26312D;
+    border-width: thick
+} */
+
+.btn-secondary {
+    color: #F5F5F5;
+    font-size: 75%;
+    background-color: #73A580;
+    border-color: #73A580;
+    /* border-width: thick */
+}
+
+.btn-secondary:hover {
+    color: #73A580;
+    font-size: 75%;
+    background-color: #F5F5F5;
+    border-color: #F5F5F5;
+    /* border-width: thick */
+}
+
+body {
+    background-color: #FCEBDB;
+}
+
+.btn-secondary {
+    font-family: 'Open Sans', sans-serif;
+    /* font-weight: heavy; */
+    font-size: 1rem;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    /* font-weight: bold; */
 }

@@ -1,0 +1,15 @@
+.btn-primary {
+    color: #F5F5F5;
+    font-size: 100%;
+    background-color: #a28e6e;
+    border-color: #a28e6e;
+    border-width: thick
+}
+
+.btn-primary:hover {
+    color: #D4FCFC;
+    font-size: 100%;
+    background-color: #a28e6e !important;
+    border-color: #a28e6e;
+    border-width: thick
+}

@@ -32,11 +32,7 @@
   <!-- Other libraries go here -->
 
   <!-- Link to styles of your own -->
-  <link rel="stylesheet" href="./styles/style.css">
-
-  <style>
-
-  </style>
+  <link rel="stylesheet" href="./styles/todolist.css">
 </head>
 
 <body>
@@ -54,23 +50,24 @@
   </div>
   <hr>
 
-  <div id="priorities" style="margin: auto; width: 80%;">
+  <div id="priorities">
     <h2>Priorities</h2>
+    <Hr>
   </div>
 
-  <div id="tasks-go-here" style="margin: auto; width: 80%;">
+  <div id="tasks-go-here">
     <h2>Tasks</h2>
+    <Hr>
   </div>
 
 
   <template id="taskCardTemplate">
-    <div
-      style="background-color: gainsboro; overflow: auto; border-radius: 25px; padding: 2%;box-sizing: border-box; margin-bottom: 20px;">
-      <div id="content" style="float: left; width: 85%; overflow: auto; box-sizing: border-box;">
+    <div id="main">
+      <div id="content">
         <h1 class="display-4 taskName" style="float: left;">
           Task Name
         </h1>
-        <a href="./taskeditform.html" id="editbtn" style="padding-left: 2%;">
+        <a href="./taskeditform.html" id="editbtn">
           Edit
         </a>
         <div style="float: right; margin-right: 1%; box-sizing: border-box;">
@@ -79,15 +76,10 @@
             Done
           </button>
         </div>
-        <p class="notes" style="padding-top: 20px; margin: auto; width: 95% ; float: left;">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione corrupti optio facilis aspernatur aliquid
-          amet
-          quas
-          sint officiis itaque quae!
+        <p class="notes">
         </p>
       </div>
-      <div id="date"
-        style="float: right; border-left: 1px gray solid; text-align: center; padding-left: 15px; width: 15%;">
+      <div id="date">
         <h3 class="month">Month</h3>
         <h1 class="display-5 day">00</h1>
       </div>

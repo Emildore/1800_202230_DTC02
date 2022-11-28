@@ -1,0 +1,77 @@
+.btn-primary {
+    color: #F5F5F5;
+    font-size: 100%;
+    background-color: #a28e6e;
+    border-color: #a28e6e;
+    border-width: thick
+}
+
+.btn-primary:hover {
+    color: #D4FCFC;
+    font-size: 100%;
+    background-color: #a28e6e !important;
+    border-color: #a28e6e;
+    border-width: thick
+}
+
+.btn-secondary {
+    color: #F5F5F5;
+    font-size: 50%;
+    background-color: #a28e6e;
+    border-color: #a28e6e;
+    /* border-width: thick */
+}
+
+.btn-secondary:hover {
+    color: #F5F5F5;
+    font-size: 50%;
+    background-color: #a28e6e;
+    border-color: #a28e6e;
+    /* border-width: thick */
+}
+
+#priorities {
+    margin: auto;
+    width: 80%;
+}
+
+#tasks-go-here {
+    margin: auto;
+    width: 80%;
+}
+
+#main {
+    background-color: gainsboro;
+    overflow: auto;
+    border-radius: 0.25rem;
+    padding: 2%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#content {
+    float: left;
+    width: 85%;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+#notes {
+    padding-top: 20px;
+    margin: auto;
+    width: 95%;
+    float: left;
+}
+
+#date {
+    float: right;
+    border-left: 1px gray solid;
+    text-align: center;
+    padding-left: 15px;
+    width: 15%;
+}
+
+#editbtn {
+    color: black;
+    padding-left: 2%;
+}

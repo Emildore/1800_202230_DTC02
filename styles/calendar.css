@@ -1,6 +1,6 @@
 .btn {
-    background-color: grey;
-    border: grey;
+    background-color: #a28e6e;
+    border: #a28e6e;
 }
 
 .tui-full-calendar-layout {
@@ -58,11 +58,11 @@
 }
 
 .tui-full-calendar-holiday {
-    color: #f00;
+    color: #a28e6e;
 }
 
 .tui-full-calendar-today {
-    background: rgba(218, 229, 249, 0.3);
+    background: #a28e6e(218, 229, 249, 0.3);
 }
 
 .handle-x {
@@ -116,7 +116,7 @@ only screen and (min-resolution: 1.5dppx) {
     height: 27px;
     line-height: 27px;
     text-align: center;
-    background: #135de6;
+    background: #a28e6e;
     border-radius: 50%;
     color: #fff;
     font-weight: bold;
@@ -491,7 +491,7 @@ only screen and (min-resolution: 1.5dppx) {
     text-indent: -9999px;
     width: 9px;
     height: 9px;
-    background-color: #135de6;
+    background-color: #a28e6e;
     margin: -4px 0 0 -5px;
     border-radius: 50%;
 }
@@ -1148,7 +1148,7 @@ only screen and (min-resolution: 1.5dppx) {
     width: 96px;
     height: 36px;
     border-radius: 40px;
-    background-color: #ff6618;
+    background-color: #a28e6e;
     font-size: 12px;
     font-weight: bold;
     color: #fff;
@@ -1156,12 +1156,12 @@ only screen and (min-resolution: 1.5dppx) {
 }
 
 .tui-full-calendar-confirm:hover {
-    background-color: #e55b15;
+    background-color: #a28e6e;
     color: #fff;
 }
 
 .tui-full-calendar-confirm:active {
-    background-color: #d95614;
+    background-color: #a28e6e;
     color: #fff;
 }
 
@@ -3180,21 +3180,21 @@ a.ui-button:active,
 .ui-state-error,
 .ui-widget-content .ui-state-error,
 .ui-widget-header .ui-state-error {
-    border: 1px solid #cd0a0a;
+    border: 1px solid #a28e6e;
     background: #fef1ec url("images/ui-bg_glass_95_fef1ec_1x400.png") 50% 50% repeat-x;
-    color: #cd0a0a;
+    color: #a28e6e;
 }
 
 .ui-state-error a,
 .ui-widget-content .ui-state-error a,
 .ui-widget-header .ui-state-error a {
-    color: #cd0a0a;
+    color: #a28e6e;
 }
 
 .ui-state-error-text,
 .ui-widget-content .ui-state-error-text,
 .ui-widget-header .ui-state-error-text {
-    color: #cd0a0a;
+    color: #a28e6e;
 }
 
 .ui-priority-primary,

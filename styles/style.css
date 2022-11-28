@@ -13,7 +13,7 @@ font-family: 'Roboto Mono', monospace; */
 }
 
 .bg-info {
-    background-color: #849CCC !important;
+    background-color: white !important;
 }
 
 .navbar-light .navbar-brand {
@@ -24,32 +24,32 @@ font-family: 'Roboto Mono', monospace; */
 .btn-primary {
     color: #F5F5F5;
     font-size: 150%;
-    background-color: #fb0066;
-    border-color: #fb0066;
+    background-color: #a28e6e;
+    border-color: #a28e6e;
     border-width: thick
-}   
+}
 
 .btn-primary:hover {
     color: #D4FCFC;
     font-size: 150%;
-    background-color: #e7005d !important;
-    border-color: #e7005d;
+    background-color: #a28e6e !important;
+    border-color: #a28e6e;
     border-width: thick
-}   
+}
 
 .btn-secondary {
     color: #F5F5F5;
     font-size: 75%;
-    background-color: #fb0066;
-    border-color: #fb0066;
+    background-color: #a28e6e;
+    border-color: #a28e6e;
     /* border-width: thick */
 }
 
 .btn-secondary:hover {
     color: #F5F5F5;
     font-size: 75%;
-    background-color: #e7005d;
-    border-color: #e7005d;
+    background-color: #a28e6e;
+    border-color: #a28e6e;
     /* border-width: thick */
 }
 
@@ -87,7 +87,7 @@ p {
     /* font-weight: bold; */
 }
 
-.buttonCustom{
+.buttonCustom {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 400;
     font-size: 0.8rem;

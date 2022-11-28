@@ -22,40 +22,48 @@ font-family: 'Roboto Mono', monospace; */
 
 
 .btn-primary {
-    color: #D4FCFC;
+    color: #F5F5F5;
     font-size: 150%;
-    background-color: #a28e6e;
-    border-color: #a28e6e;
+    background-color: #fb0066;
+    border-color: #fb0066;
     border-width: thick
 }   
 
 .btn-primary:hover {
     color: #D4FCFC;
     font-size: 150%;
-    background-color: #8b7a5d !important;
-    border-color: #8b7a5d;
+    background-color: #e7005d !important;
+    border-color: #e7005d;
     border-width: thick
 }   
 
 .btn-secondary {
     color: #F5F5F5;
     font-size: 75%;
-    background-color: #a28e6e;
-    border-color: #a28e6e;
+    background-color: #fb0066;
+    border-color: #fb0066;
     /* border-width: thick */
 }
 
 .btn-secondary:hover {
-    color: #a28e6e;
+    color: #F5F5F5;
     font-size: 75%;
-    background-color: #F5F5F5;
-    border-color: #F5F5F5;
+    background-color: #e7005d;
+    border-color: #e7005d;
     /* border-width: thick */
 }
 
-body {
-    /* background-color: #eedadd; */
-}
+/* body {
+    background: url(./images/purplesky.jpg) no-repeat center center fixed !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+} */
+
+/* body {
+    background-color: #ffffff;
+} */
 
 .btn-secondary {
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -67,7 +75,7 @@ h1 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
     font-size: 4rem;
-    color: #2c343e;
+    color: #3d405b;
 
 }
 
@@ -75,7 +83,7 @@ p {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 400;
     font-size: 0.8rem;
-    color: #2c343e;
+    color: #3d405b;
     /* font-weight: bold; */
 }
 
@@ -90,12 +98,12 @@ p {
     /* font-weight: bold; */
 }
 
-a{
+/* a{
     color: #6c3926;
 }
 a:hover{
     color: #4d281a;
-}
+} */
 .buttonCustom:hover {
     color: #ffffff !important;
     background-color: #8b7a5d !important;

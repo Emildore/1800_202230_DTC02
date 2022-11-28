@@ -8,11 +8,11 @@
 
 .background_style {
     /* background-image: url("../images/apotheosis.jpg"); */
-    color: bisque;
-    background-color: #a28e6e !important;
+    /* color: bisque; */
+    /* background-color: #e7005d !important; */
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2); */
     box-sizing: border-box;
 }
 
@@ -43,18 +43,18 @@
     }
 }
 
-h1 {
+/* h1 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
     font-size: 4rem;
-    color: #ffffff;
+    color: #3d405b;
 
-}
+} */
 
 p {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 400;
     font-size: 0.9rem !important;
-    color: #ffffff !important;
+    color: #3d405b !important;
     /* font-weight: bold; */
 }

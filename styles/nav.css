@@ -28,3 +28,15 @@
 .border_bottom {
     border-bottom: 1px solid #f2f2f2;
 }
+
+#prflbtn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    img {
+        margin: auto;
+    }
+}

@@ -77,6 +77,8 @@ function writeSpending() {
                 spendings: firebase.firestore.FieldValue.arrayUnion(Type)
             }, {
                 merge: true
+            }).then(function () {
+                location.reload()
             })
 
         } else {

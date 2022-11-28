@@ -43,7 +43,7 @@
 #main {
     background-color: gainsboro;
     overflow: auto;
-    border-radius: 0.25rem;
+    border-radius: 15px;
     padding: 2%;
     box-sizing: border-box;
     margin-bottom: 20px;

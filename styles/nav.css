@@ -4,7 +4,8 @@
 }
 
 .nav-link {
-    color: #3d405b !important;
+    /* color: #3d405b !important; */
+    color: #fff !important;
     font-weight: 600;
 }
 
@@ -22,12 +23,12 @@
 
 .navbar-expand-lg {
     /* background-color: rgba(247, 247, 247, 0.1); */
-    /* background-color: #313638 !important; */
+    background-color: #a28e6e79 !important;
 }
 
-.border_bottom {
+/* .border_bottom {
     border-bottom: 1px solid #f2f2f2;
-}
+} */
 
 #prflbtn {
     position: absolute;

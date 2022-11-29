@@ -1,4 +1,4 @@
-## My Web Application (Add your Title here)
+## MOTI
 
 * [General info](#general-info)
 * [Technologies](#technologies)
@@ -8,10 +8,7 @@
 
 This browser based web application to ...
 
-* Hello my name is Emily. I'm excited about this project because...
-* Hello, my name is Elijah and I'm excited to be working on this project
-* My name is Wilber and I am excited to develop something useful for the first time ever.
-* Hello, my name is Amir, and I'm excited to be a part of this project!
+Our team DTC02 is developing a web application to help anybody garner motivation by generating positive momentum and giving positive affirmations.
 
 ## Technologies
 
@@ -20,7 +17,7 @@ Technologies used for this project:
 * HTML, CSS
 * JavaScript
 * Bootstrap
-* ...
+* Firebase, Firestore, and Firestorage
 
 ## Content
 
@@ -29,17 +26,50 @@ Content of the project folder:
 ```
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
-├── index.html               # landing HTML file, this is what users see when you come to url
-└── README.md
+├──cal.html               
+├──favourited.html
+├──index.html               # landing HTML file, this is what users see when you come to url
+├──information.html
+├──login.html
+├──main.html
+├──profile.html
+├──quotes.html
+├──README.md
+├──spending.html
+├──taskcreationform.html
+├──taskeditform.html
+├──todolist.html
+└──workouts.html
 
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
-├── images                   # Folder for images
-    /blah.jpg                # 
-├── scripts                  # Folder for scripts
-    /blah.js                 # 
-├── styles                   # Folder for styles
-    /blah.css                # 
+├── .vscode                  # Folder for json settings
+ 
+├── .images                  # Folder for images
+    \apotheosis.jpg
+    \books.jpg
+    \coins1.jpg
+    \coins2.jpg
+    \coins3.jpg
+    \cycling.jpg
+    \girlstudying.jpg
+    \jogs.jpg
+    \jumprope.jpg
+    \kettlebells.jpg
+    \logoipsum-289.svg
+    \money.jpg
+    \pexels-j-lee-7647583.jpg
+    \purplesky.jpg
+    \rennaisance.jpg
+    \squats.jpg
+    \track.jpg
+    \white.png
+    \womans2.jpg               
+├── .scripts                 # Folder for scripts
+    /blah.css                
+├── .styles                  # Folder for styles
+
+├── .text                    # Folder for Header and Footer
 
 Firebase hosting files: 
 ├── .firebaserc...

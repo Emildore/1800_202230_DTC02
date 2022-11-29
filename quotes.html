@@ -30,12 +30,14 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
-  <!-- Other libraries go here -->
 
-  <!-- Link to styles of your own -->
+
+
+  <!-- Link to styles of my own -->
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="./styles/quotes.css">
   <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/masonry/" />
+
   <!-- Google Icons (Material Design)-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -64,18 +66,18 @@
 
 
   <!-- Source of this bootstrap: https://getbootstrap.com/docs/5.2/examples/masonry/ -->
+  <!--Initializes the overall layout of the page -->
   <main class="container py-5">
 
+    <!-- Creates a title for the page -->
     <div class="container">
       <div class="p-4 p-md-5 mb-4 rounded background_style">
         <div class="col-md-6 px-0">
           <h1 class="display-4">Motivational Quotes</h1>
           <p class="lead my-3"> Here are some quotes to help you if you're feeling blue</p>
-          <!-- <p class="lead mb-0"><a href="./favourited.html" class="text-white fw-bold">Check saved quotes</a></p> -->
         </div>
       </div>
       <hr class="my-5" />
-      <!-- Here is container for cards  -->
       <div class="container">
         <div id="quoteCardGroup" class="row row-cols-auto">
         </div>
@@ -83,6 +85,7 @@
     </div>
 
     <!-- Beginning of quotes card -->
+    <!-- This is a template which wil be filled when the js file is loaded -->
     <template class="images"></template>
 
     <template id="quoteCardTemplate">
@@ -103,6 +106,11 @@
 
   </main>
 
+  <nav id="footerPlaceholder"></nav>
+
+  <!---------------------------------------------->
+  <!-- Your own JavaScript functions go here    -->
+  <!---------------------------------------------->
   <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
@@ -110,12 +118,6 @@
   <script async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
     integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
     crossorigin="anonymous"></script>
-
-  <nav id="footerPlaceholder"></nav>
-
-  <!---------------------------------------------->
-  <!-- Your own JavaScript functions go here    -->
-  <!---------------------------------------------->
 
   <!-- Link to scripts of your own -->
   <script src="./scripts/firebaseAPI_DTC02.js"></script>

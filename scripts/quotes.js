@@ -1,5 +1,9 @@
-// // This function stores the data from API to Firestore, data is already stores so it's commented out
+// This function stores the data from API to Firestore, data is already stores so it's commented out
+// parameter type: API - any variable type
+// return: none
+
 // var listQuotes = {}
+// //Source 
 // //https://stoicquotesapi.com/quotes
 // setup = function () {
 //     $.ajax(
@@ -29,33 +33,9 @@
 // $(document).ready(setup);
 
 
-// var listImages = {}
-// setup = function () {
-//     $.ajax(
-//         {
-//             url: "https://picsum.photos/v2/list?page=6&limit=100",
-//             type: "GET",
-//             success: function (imageList) {
-//                 imageList.forEach(eachImage => {
-
-//                     //defining a variable for the collection i want to create in Firestore to populate data
-//                     var imageRef = db.collection("images");
-
-//                     imageRef.add({
-//                         image_link: eachImage.download_url, // adding the image url to Firestore
-//                         code: eachImage.id //adding the id to Firestore
-
-//                     });
-//                 });
-//             },
-//             error: function (error) {
-//                 console.log(error);
-//             }
-//         }
-//     )
-// }
-// $(document).ready(setup);
-
+// Checks if a user is signed in:
+// parameter type: firebase reference - any variable type
+// return: none
 var currentUser;
 firebase.auth().onAuthStateChanged(user => {
     if (user) {
@@ -71,72 +51,59 @@ firebase.auth().onAuthStateChanged(user => {
     }
 });
 
+// This function populates the quotes dynamically from Firestore to the HTML page
+// parameter type: firestore reference - any variable type
+// return: none
 function populateQuotesDynamically() {
     let quoteCardTemplate = document.getElementById("quoteCardTemplate");  //card template
     let quoteCardGroup = document.getElementById("quoteCardGroup");   //where to append card
 
-    //doublecheck: is your Firestore collection called "hikes" or "Hikes"?
+    // get the quotes document from the database
     db.collection("quotes").get()
-        .then(allQuotes => {
+        .then(allQuotes => {   //allQuotes is a collection of all the quotes
             allQuotes.forEach(doc => {
-                var quote = doc.data().quote; //gets the name field
+                //for each quote in the collection get the data and store it in a variable
+                var quote = doc.data().quote; //gets the quote field
                 var quoteID = doc.data().code; //gets the unique ID field
-                var author = doc.data().author; //gets the length field
+                var author = doc.data().author; //gets the author field
                 let testQuoteCard = quoteCardTemplate.content.cloneNode(true);
-                testQuoteCard.querySelector('.quotes').innerHTML = quote;
-                testQuoteCard.querySelector('.authors').innerHTML = author;
-                // testQuoteCard.querySelector('a').onclick = () => setQuoteData(quoteID);
+                testQuoteCard.querySelector('.quotes').innerHTML = quote; // set the quote text in a class called quotes
+                testQuoteCard.querySelector('.authors').innerHTML = author; // set the author text in a class called authors
 
                 //next 2 lines are new for demo#11
-                //this line sets the id attribute for the <i> tag in the format of "save-hikdID" 
-                //so later we know which hike to bookmark based on which hike was clicked
+                //this line sets the id attribute for the <i> tag in the format of quoteID" 
+                //so later we know which hike to bookmark based on which quote was favourited
                 testQuoteCard.querySelector('i').id = 'save-' + quoteID;
-                // this line will call a function to save the hikes to the user's document             
+                // this line will call a function to save the quotes to the user's document             
                 testQuoteCard.querySelector('i').onclick = () => saveQuote(quoteID);
-
-                // populate with images dynamically on sprint 4
-                // testQuoteCard.querySelector('img').src = `./images/${quoteID}.jpg`;
+                // this line will append the card to the card group
                 quoteCardGroup.appendChild(testQuoteCard);
             })
         })
 }
 
-// function populateImagesDynamically() {
-//     let imageCardTemplate = document.getElementById("imageCardTemplate");  //card template
-//     let imageCardGroup = document.getElementById("imageCardGroup");   //where to append card
 
-//     //doublecheck: is your Firestore collection called "hikes" or "Hikes"?
-//     db.collection("images").get()
-//         .then(allImages => {
-//             allImages.forEach(doc => {
-//                 var image = doc.data().image_link; //gets the name field
-//                 var imageID = doc.data().code; //gets the unique ID field
-//                 let testImageCard = imageCardTemplate.content.cloneNode(true);
-//                 testImageCard.querySelector('img').src = image;
-//                 testImageCard.querySelector('img').id = imageID;
-//                 testImageCard.querySelector('img').onclick = () => setQuoteData(imageID);
-
-//                 imageCardGroup.appendChild(testImageCard);
-//             })
-//         })
-// }
-
-function setQuoteData(id) {
-    localStorage.setItem('quoteID', id);
+// This function set quoteID with the id of the quote
+// parameter type: id - any variable type
+// return: none
+function setQuoteData(id) { //this function is called when the user clicks on the quote
+    localStorage.setItem('quoteID', id); //sets the quoteID to the id of the quote
 }
 setQuoteData();
 
+//This is to change the icon of the hike that was saved to "filled"
+// parameter type: firestore reference - any variable type
+// return: none
 function saveQuote(quoteID) {
     currentUser.set({
-        favouriteQuotes: firebase.firestore.FieldValue.arrayUnion(quoteID)
+        favouriteQuotes: firebase.firestore.FieldValue.arrayUnion(quoteID) //adds the quoteID to the array
     }, {
-        merge: true
+        merge: true // this is to merge the data with the existing data
     })
-        .then(function () {
+        .then(function () { //if the quote was saved successfully
             console.log("bookmark has been saved for: " + currentUser);
             var iconID = 'save-' + quoteID;
             //console.log(iconID);
-            //this is to change the icon of the hike that was saved to "filled"
-            document.getElementById(iconID).innerText = 'bookmark';
+            document.getElementById(iconID).innerText = 'bookmark'; // gets the icon id and changes the icon to filled 
         });
 }

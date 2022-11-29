@@ -39,58 +39,28 @@
     <!-- Link to styles of your own -->
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/index.css">
-
-    <style>
-        /* body {
-            background: url(./images/white.png) no-repeat center center fixed !important;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        } */
-
-
-
-        .bg_color {
-            background-color: #A28E6E !important;
-        }
-
-        h1 {
-            color: white !important;
-        }
-
-        #main {
-            color: white !important;
-        }
-    </style>
 </head>
 
 <body>
-
+    <!-- navbar -->
+    <nav id="navbarPlaceholder"></nav>
     <!------------------------------>
     <!-- Your HTML Layout go here -->
     <!------------------------------>
-    <nav id="navbarPlaceholder"></nav>
 
+    <!-- Display the user's name and daily quote -->
     <div class="p-5 text-left bg-image rounded-3 align-middle">
         <div id="main" class=" container-fluid text-light p-5 bg_color align-middle">
-            <!-- <div class="container bg-dark p-5"> -->
             <h1 class="display-4">Hello, <span id="name-goes-here"></span></h1>
             <hr>
             <p id="intro">Quote of the day:</p>
             <p id="quote"></p>
             <p id="author"></p>
         </div>
-        <!-- </div> -->
     </div>
 
-
+    <!-- footer -->
     <nav id="footerPlaceholder"></nav>
-
-
-    <!---------------------------------------------->
-    <!-- Your own JavaScript functions go here    -->
-    <!---------------------------------------------->
 
     <!-- Link to scripts of your own -->
     <script src="./scripts/firebaseAPI_DTC02.js"></script>

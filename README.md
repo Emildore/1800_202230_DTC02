@@ -47,6 +47,10 @@ Firebase hosting files:
 
 ```
 
+(((((BELOW ADDED BY AMIR PLS EDIT)))))
+## Sources
+For Quotes API:
+https://stoicquotesapi.com/quotes
 Tips for file naming files and folders:
 
 * use lowercase with no spaces

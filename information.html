@@ -35,10 +35,7 @@
     <link rel="stylesheet" href="./styles/style.css">
 
     <style>
-        h2 {
-            color: #ffffff !important;
-        }
-
+        /* Does not work in external css file  */
         .transparent {
             background-color: rgba(129, 129, 129, 0.3);
             border-radius: 15px;
@@ -47,20 +44,19 @@
 </head>
 
 <body>
-
+    <!-- Navbar -->
+    <nav id="navbarPlaceholder"></nav>
     <!------------------------------>
     <!-- Your HTML Layout go here -->
     <!------------------------------>
-    <nav id="navbarPlaceholder"></nav>
 
     <main>
-
-
-        <!-- Marketing messaging and featurettes
-            ================================================== -->
-        <!-- Wrap the rest of the page in another container to center all the content. -->
-
+        <!-- Container for all html elements -->
         <div class="container marketing">
+
+
+            <!-- Three columns image and text below the carousel -->
+            <!-- bootstrap template -->
             <!-- https://getbootstrap.com/docs/5.2/examples/carousel/ -->
             <h1 class="display-4">Wellness Support</h1>
             <p class="lead">
@@ -142,12 +138,12 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+            <!-- Carousel End -->
 
+            <!-- Information sections-->
             <div class="row featurette">
                 <div class="col-md-7">
                     <h2 class="featurette-heading fw-normal lh-1">Booking Counselling Appointments at BCIT
-                        <!-- <span class="text-muted">It’ll
-                            blow your mind.</span> -->
                     </h2>
                     <p class="lead" style="font-size: small;">
 
@@ -172,10 +168,7 @@
 
             <div class="row featurette">
                 <div>
-                    <!-- <div class="col-md-7"> -->
                     <h2 class="featurette-heading fw-normal lh-1">Contact BCIT Counselling & Student Development
-                        <!-- <span
-                            class="text-muted">Checkmate.</span> -->
                     </h2>
                     <h4>Burnaby location</h4>
                     <p class="lead" style="font-size: small;">
@@ -211,12 +204,12 @@
 
             <hr class="featurette-divider">
 
-            <!-- /END THE FEATURETTES -->
+            <!-- End of informations-->
 
-        </div><!-- /.container -->
+        </div>
     </main>
 
-
+    <!-- Footer -->
     <footer class="py-3 my-4">
 
         <p class="text-center text-muted">© 2022 BCIT COMP1800 Creations</p>

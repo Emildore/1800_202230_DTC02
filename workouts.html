@@ -31,101 +31,6 @@
 
     <link rel="stylesheet" href="./styles/trackers.css">
     <style>
-        /* * {
-            box-sizing: border-box;
-        }
-
-        #header {
-            padding: 20px;
-            padding-bottom: 0px;
-            margin: 0px;
-        }
-
-        body {
-            background-image: url('images/track.jpg');
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        h1,
-        h2,
-        h3,
-        div {
-            margin: 0px;
-        }
-
-        .card {
-            background-color: #ffffff;
-            padding: 20px;
-            margin-top: 0px;
-        }
-
-        img {
-            border-radius: 10px;
-            margin-bottom: 10px;
-            height: 100%;
-            width: 150px
-        }
-
-        table {
-            width: 100%;
-            padding: 0px
-        }
-
-        h4 {
-            padding-bottom: 0px;
-            margin-bottom: 0px;
-        }
-
-        #table_rule {
-            padding-top: 0px;
-            margin-top: 0px;
-        }
-
-        @media screen and (max-width: 600px) {
-
-            #left_column,
-            #right_column {
-                width: 50%;
-            }
-
-            #left_column_i,
-            #right_column_i {
-                width: 100%;
-            }
-
-            #right_column {
-                padding-left: 0px;
-            }
-
-            .card img {
-                width: 100%;
-            }
-        }
-
-        @media screen and (max-width:300px) {
-            #topnav a {
-                float: none !important;
-            }
-
-            #left_column,
-            #right_column {
-                width: 100%;
-            }
-
-            #left_column_i,
-            #right_column_i {
-                width: 100%;
-            }
-
-            .card img {
-                width: 100%;
-            }
-        }
-
-        #footer {
-            clear: both;
-        } */
-
         #topimage {
             border-radius: 10px;
             margin-bottom: 10px;
@@ -147,94 +52,11 @@
 <body>
 
     <nav id="navbarPlaceholder"></nav>
-
-    <!-- <div id="header" style="text-align: center;">
-        <h1 style="margin-bottom: 15px;">Workouts</h1>
-        <img src="images/squats.jpg" id="topimage">
-        <img src="images/jogs.jpg" id="topimage">
-        <img src="images/cycling.jpg" id="topimage">
-        <img src="images/kettlebells.jpg" id="topimage">
-        <img src="images/jumprope.jpg" id="topimage">
-        <hr width="80%">
-    </div>
-
-    <div class="container">
-        <br>
-        <h1>Add Workout</h1>
-        <br>
-        <form>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Type</label>
-                <input type="text" class="form-control" id="type" placeholder="ex: Weightlifting">
-            </div><br>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Date</label>
-                <input type="text" class="form-control" id="date" placeholder="ex: 01 Nov 2022">
-            </div><br>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Exercise</label>
-                <input type="text" class="form-control" id="exercise" placeholder="ex: Squats">
-            </div><br>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Performance</label>
-                <input type="text" class="form-control" id="performance" placeholder="ex: 150 lbs, 5 reps, 3 sets">
-            </div><br>
-            <div class="d-flex justify-content-end">
-                <button type="button" class="btn btn-lg btn-primary pull-right" onclick="writeWorkout()">Submit</button>
-            </div>
-        </form>
-    </div>
-
-    <div class="card">
-        <table>
-            <tr style="text-align: center;">
-                <td>
-                    <h4>Type</h4>
-                    <hr id="table_rule">
-                </td>
-                <td>
-                    <h4>Date</h4>
-                    <hr id="table_rule">
-                </td>
-                <td>
-                    <h4>Exercises</h4>
-                    <hr id="table_rule">
-                </td>
-                <td style="width: 50%">
-                    <h4>Performance</h4>
-                    <hr id="table_rule">
-                </td>
-            </tr>
-            <tr style="text-align: center;">
-                <td>
-                    <p><span id='type-goes-here'></span></p>
-                </td>
-                <td>
-                    <p><span id='date-goes-here'></span></p>
-                </td>
-                <td>
-                    <p><span id='exercises-goes-here'></span></p>
-                </td>
-                <td style="width: 50%">
-                    <p><span id='perf-goes-here'></span></p>
-                </td>
-            </tr>
-        </table>
-    </div> -->
-
     <main class="container py-5">
 
         <div class="container">
             <h1 class="display-4">Workouts</h1>
-            <p class="lead">
-                <img src="images/squats.jpg" id="topimage">
-                <img src="images/jogs.jpg" id="topimage">
-                <img src="images/cycling.jpg" id="topimage">
-                <img src="images/kettlebells.jpg" id="topimage">
-                <img src="images/jumprope.jpg" id="topimage">
-            </p>
             <hr class="my-5" />
-
             <div class="container">
                 <br>
                 <h1 class="display-4">Add Workout</h1>
@@ -267,7 +89,6 @@
 
         <div class="container">
             <h1>Workouts</h1>
-            <!-- Here is container for cards  -->
             <div class="container">
                 <div id="workouts-go-here" class="row row-cols-auto">
                 </div>
@@ -287,44 +108,6 @@
                 </div>
             </div>
         </template>
-
-        <!-- <div class="card">
-            <table>
-                <tr style="text-align: center;">
-                    <td>
-                        <h4>Type</h4>
-                        <hr id="table_rule">
-                    </td>
-                    <td>
-                        <h4>Date</h4>
-                        <hr id="table_rule">
-                    </td>
-                    <td>
-                        <h4>Exercises</h4>
-                        <hr id="table_rule">
-                    </td>
-                    <td style="width: 50%">
-                        <h4>Performance</h4>
-                        <hr id="table_rule">
-                    </td>
-                </tr>
-                <tr style="text-align: center;">
-                    <td>
-                        <p><span id='type-goes-here'></span></p>
-                    </td>
-                    <td>
-                        <p><span id='date-goes-here'></span></p>
-                    </td>
-                    <td>
-                        <p><span id='exercises-goes-here'></span></p>
-                    </td>
-                    <td style="width: 50%">
-                        <p><span id='perf-goes-here'></span></p>
-                    </td>
-                </tr>
-            </table>
-        </div> -->
-
     </main>
 
     <nav id="footerPlaceholder"></nav>

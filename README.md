@@ -48,17 +48,7 @@ It has the following subfolders and files:
 ├── .git                      # Folder for git repo
 ├── .vscode                   # Folder for json settings
 ├── .images                   # Folder for images
-        \coins1.jpg
-        \coins2.jpg
-        \coins3.jpg
-        \cycling.jpg
-        \jogs.jpg
-        \jumprope.jpg
-        \kettlebells.jpg
-        \logoipsum-289.svg
-        \money.jpg
-        \squats.jpg
-        \track.jpg           
+        \logoipsum-289.svg        
 ├── .scripts                  # Folder for scripts
         \authentication.js    # js for login.html
         \calendar.js          # js for calendar.html
@@ -73,8 +63,7 @@ It has the following subfolders and files:
         \taskcreation.js      # js for taskcreationform.html
         \taskeditform.js      # js for taskeditform.html
         \to-do list.js        # js for todolist.html
-        \workouts-backup.js   # 
-        \workouts.js          #    
+        \workouts.js          # js for workouts   
 ├── .styles                   # Folder for styles
         \calendar.css         # style for calendar.html
         \index.css            # style for index.html

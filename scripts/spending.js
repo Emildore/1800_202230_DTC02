@@ -1,5 +1,3 @@
-
-
 function readSpending() {
 
     firebase.auth().onAuthStateChanged(user => {

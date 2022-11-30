@@ -1,22 +1,3 @@
-// function readWorkouts() {
-
-//     firebase.auth().onAuthStateChanged(user => {
-//         if (user) {
-//             db.collection("workouts").get()
-//                 .then(allWorkouts => {
-//                     allWorkouts.forEach(somedoc => {
-//                         if (user.uid == somedoc.data().userID) {
-//                             document.getElementById("perf-goes-here").insertAdjacentHTML("afterend", somedoc.data().performance + '<br>');      //using javascript to display the data on the right place
-//                             document.getElementById("exercises-goes-here").insertAdjacentHTML("afterend", somedoc.data().exercises + '<br>')
-//                             document.getElementById("date-goes-here").insertAdjacentHTML("afterend", somedoc.data().date + '<br>')
-//                             document.getElementById("type-goes-here").insertAdjacentHTML("afterend", somedoc.data().type + '<br>')
-//                         }
-//                     })
-//                 })
-//         }
-//     })
-// }
-
 function displayWorkouts() {
     document.getElementById("workouts-go-here").innerHTML = ''
 
@@ -52,14 +33,7 @@ function displayWorkouts() {
                                 newcard.querySelector('.card-exercise').innerHTML = exercises;
                                 newcard.querySelector('.card-performance').innerHTML = performance;
 
-                                //give unique ids to all elements for future use
-                                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
-                                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
-                                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
-
-                                //attach to gallery
                                 document.getElementById("workouts-go-here").appendChild(newcard);
-                                //i++;   //if you want to use commented out section
                             }
                         })
                     }

@@ -36,6 +36,10 @@
     top: 15px;
 }
 
+.dropdown-menu {
+    background-color: #a28e6e79 !important;
+}
+
 @media screen and (max-width: 600px) {
     img {
         margin: auto;

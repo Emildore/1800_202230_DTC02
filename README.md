@@ -113,7 +113,7 @@ For logo:
 
 ## contact
 
-* Amir
+* Amir - aeskandari1@my.bcit.ca
 * Emily Tran - etran21@my.bcit.ca
 * Elijah - efabon2@my.bcit.ca
 * Wilber - wlin118@my.bcit.ca

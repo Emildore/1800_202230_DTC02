@@ -3,6 +3,9 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Contents](#content)
+* [Resources](#reources)
+* [Contact](#contact)
+* [Acknowledgement](#acknowledgements)
 
 ## General Info
 
@@ -37,7 +40,7 @@ Content of the project folder:
 ├──README.md                  # README.md file, current file populated with project information
 ├──spending.html              # spending HTML file, page used to track spending
 ├──taskcreationform.html      # taskcreationform HTML file, to do list task creation form
-├──taskeditform.html          # 
+├──taskeditform.html          # taskeditform HTML file, to do task edit form
 ├──todolist.html              # todolist HTML file, page that lists to do tasks
 └──workouts.html              # workouts HTML file, page to track workouts
 
@@ -70,7 +73,7 @@ It has the following subfolders and files:
         \taskcreation.js      # js for taskcreationform.html
         \taskeditform.js      # js for taskeditform.html
         \to-do list.js        # js for todolist.html
-        \workouts-backup.js   #
+        \workouts-backup.js   # 
         \workouts.js          #    
 ├── .styles                   # Folder for styles
         \calendar.css         # style for calendar.html
@@ -116,7 +119,7 @@ For logo:
 * Amir - aeskandari1@my.bcit.ca
 * Emily Tran - etran21@my.bcit.ca
 * Elijah - efabon2@my.bcit.ca
-* Wilber
+* Wilber - wlin118@my.bcit.ca
 
 ## Acknowledgements
 

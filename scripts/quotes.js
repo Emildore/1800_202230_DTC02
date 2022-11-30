@@ -76,6 +76,16 @@ function populateQuotesDynamically() {
                 testQuoteCard.querySelector('i').id = 'save-' + quoteID;
                 // this line will call a function to save the quotes to the user's document             
                 testQuoteCard.querySelector('i').onclick = () => saveQuote(quoteID);
+
+                // this checks if the quote is already saved by the user and changes the icon to filled
+                currentUser.get().then(userData => {
+                    //get the user name
+                    var bookmarks = userData.data().favouriteQuotes;
+                    console.log(bookmarks);
+                    if (bookmarks.includes(quoteID)) {
+                        document.getElementById('save-' + quoteID).innerText = 'bookmark';
+                    }
+                })
                 // this line will append the card to the card group
                 quoteCardGroup.appendChild(testQuoteCard);
             })

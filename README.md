@@ -100,7 +100,7 @@ Firebase hosting files:
 
 ```
 
-## Reources
+## Resources
 
 For Quotes API:
 <https://stoicquotesapi.com/quotes>

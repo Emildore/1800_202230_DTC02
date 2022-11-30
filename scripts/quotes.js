@@ -91,7 +91,7 @@ function setQuoteData(id) { //this function is called when the user clicks on th
 }
 setQuoteData();
 
-//This is to change the icon of the hike that was saved to "filled"
+//This is to change the icon of the quote that was saved to "filled"
 // parameter type: firestore reference - any variable type
 // return: none
 function saveQuote(quoteID) {

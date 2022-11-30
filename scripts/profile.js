@@ -28,12 +28,12 @@ function saveUserInfo() {
         console.log("storageRef: " + storageRef);
         console.log("ImageFile: " + ImageFile);
 
-        //Asynch call to put File Object (global variable ImageFile) onto Cloud
+        //Async call to put File Object (global variable ImageFile) onto Cloud
         storageRef.put(ImageFile)
             .then(function () {
                 console.log('Uploaded to Cloud Storage.');
 
-                //Asynch call to get URL from Cloud
+                //Async call to get URL from Cloud
                 storageRef.getDownloadURL()
                     .then(function (url) { // Get "url" of the uploaded file
                         console.log("Got the download URL.");
@@ -47,7 +47,7 @@ function saveUserInfo() {
                         userState = document.getElementById("inputState").value;
                         userZip = document.getElementById("inputZip").value;
 
-                        //Asynch call to save the form fields into Firestore.
+                        //Async call to save the form fields into Firestore.
                         db.collection("users").doc(user.uid).update({
                             name: userName,
                             lastName: userLast,

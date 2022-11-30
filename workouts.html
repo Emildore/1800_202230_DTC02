@@ -246,8 +246,8 @@
                     </div><br>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Date</label>
-                        <input type="text" class="form-control" id="date" placeholder="ex: 01 Nov 2022">
-                    </div><br>
+                        <input type="date" id="date" name="birthday" class="form-control">
+                    </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Exercise</label>
                         <input type="text" class="form-control" id="exercise" placeholder="ex: Squats">
@@ -265,7 +265,30 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="container">
+            <h1>Workouts</h1>
+            <!-- Here is container for cards  -->
+            <div class="container">
+                <div id="workouts-go-here" class="row row-cols-auto">
+                </div>
+            </div>
+        </div>
+
+        <!-- Templates for general use, not displayed -->
+        <template id="workoutCardTemplate">
+            <div class="card py-2 mx-2" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-date"></h5>
+                    <br>
+                    <h6 class="card-type"></h6>
+                    <br>
+                    <p class="card-exercise"></p>
+                    <p class="card-performance"></p>
+                </div>
+            </div>
+        </template>
+
+        <!-- <div class="card">
             <table>
                 <tr style="text-align: center;">
                     <td>
@@ -300,7 +323,7 @@
                     </td>
                 </tr>
             </table>
-        </div>
+        </div> -->
 
     </main>
 

@@ -67,9 +67,9 @@ It has the following subfolders and files:
         \quotes.js            # js for quotes.html
         \skeleton.js          # js to load navbar and footer into HTML pages
         \spending.js          # js for spending.html
-        \taskcreation.js      # 
-        \taskeditform.js      #
-        \to-do list.js        #
+        \taskcreation.js      # js for taskcreationform.html
+        \taskeditform.js      # js for taskeditform.html
+        \to-do list.js        # js for todolist.html
         \workouts-backup.js   #
         \workouts.js          #    
 ├── .styles                   # Folder for styles
@@ -115,7 +115,7 @@ For logo:
 
 * Amir
 * Emily Tran - etran21@my.bcit.ca
-* Elijah
+* Elijah - efabon2@my.bcit.ca
 * Wilber
 
 ## Acknowledgements

@@ -5,7 +5,6 @@ function displayCards(collection) {
       
           db.collection("users").doc(user.uid).collection(collection).get()
               .then(snap => {
-                  var i = 1;  //if you want to use commented out section
                   snap.forEach(doc => { //iterate thru each doc
                       var taskname = doc.data().taskname;        
                       var month = doc.data().month;  
@@ -14,7 +13,7 @@ function displayCards(collection) {
                       var priority = doc.data().priority
                       let newcard = cardTemplate.content.cloneNode(true);
       
-                      //update title and text and image
+                      //update task information
                       newcard.querySelector('.taskName').innerHTML = taskname;
                       newcard.querySelector('.month').innerHTML = month;
                       newcard.querySelector('.day').innerHTML = day;
@@ -29,19 +28,12 @@ function displayCards(collection) {
                         };
                       }
       
-                      //give unique ids to all elements for future use
-                      newcard.querySelector('.taskName').setAttribute("id", "ctaskName" + i);
-                      newcard.querySelector('.month').setAttribute("id", "cmonth" + i);
-                      newcard.querySelector('.day').setAttribute("id", "cday" + i);
-                      newcard.querySelector('.notes').setAttribute("id", "cnotes" + i);
-      
                       //attach to gallery
                       if (priority == true) {
                         document.getElementById("priorities").appendChild(newcard);
                       } else {
                         document.getElementById(collection + "-go-here").appendChild(newcard);
                       }
-                      i++;   //if you want to use commented out section
                   })
               })
         } else {

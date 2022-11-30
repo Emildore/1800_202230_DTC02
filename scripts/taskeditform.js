@@ -55,6 +55,7 @@ function saveTaskInfo() {
             } else {
               Priority = false
             }     
+  // writes to firebase
   Task.update({
                       taskname: Taskname,
                       month: Month,
@@ -69,6 +70,7 @@ function saveTaskInfo() {
                   })
 }
 
+// automatically goes to the to do list
 function gototodolist () {
   window.location.href = "../todolist.html";
 }

@@ -1,33 +1,36 @@
+//Display cards for past workouts.
 function displayWorkouts() {
     document.getElementById("workouts-go-here").innerHTML = ''
 
     let cardTemplate = document.getElementById("workoutCardTemplate");
 
+    //Verify user login. 
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             db.collection('workouts').get()
                 .then(snap => {
+                    //Assemble dates of user workout documents in list.
                     const ms_date_array = [];
                     console.log(ms_date_array)
-                    snap.forEach(doc => { //iterate thru each doc
+                    snap.forEach(doc => {
                         if (user.uid == doc.data().userID) {
                             ms_date_array.push(parseInt(doc.data().ms_date))
                         }
                     })
+                    //Sort list of dates
                     ms_date_array.sort()
                     ms_date_array.reverse()
                     console.log(ms_date_array)
+                    //For each date in list of dates, display workout card.
                     for (seconds of ms_date_array) {
-                        //var i = 1;  //if you want to use commented out section
-                        snap.forEach(doc => { //iterate thru each doc
+                        snap.forEach(doc => {
                             if (user.uid == doc.data().userID && seconds == doc.data().ms_date) {
-                                var date = doc.data().date;        // get value of the "name" key
-                                var type = doc.data().type;   // get value of the "details" key
+                                var date = doc.data().date;
+                                var type = doc.data().type;
                                 var exercises = doc.data().exercises;
                                 var performance = doc.data().performance;
                                 let newcard = cardTemplate.content.cloneNode(true);
 
-                                //update title and text and image
                                 newcard.querySelector('.card-date').innerHTML = date;
                                 newcard.querySelector('.card-type').innerHTML = type;
                                 newcard.querySelector('.card-exercise').innerHTML = exercises;
@@ -44,7 +47,9 @@ function displayWorkouts() {
 
 displayWorkouts();
 
+//Take data from workout adding form to add to workouts collection. 
 function writeWorkout() {
+    //Take data from workout adding form.
     let Type = document.getElementById("type").value;
     let Datestring = document.getElementById("date").value;
     let Exercise = document.getElementById("exercise").value;
@@ -52,6 +57,7 @@ function writeWorkout() {
 
     date_object = new Date(Datestring)
 
+    //Verify user login. 
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             var currentUser = db.collection("users").doc(user.uid)
@@ -59,6 +65,7 @@ function writeWorkout() {
             //get the document for current user.
             currentUser.get()
                 .then(userDoc => {
+                    //Add workout data to new document in workouts collection. 
                     db.collection("workouts").add({
                         userID: userID,
                         type: Type,
@@ -67,6 +74,7 @@ function writeWorkout() {
                         exercises: Exercise,
                         performance: Performance
                     })
+                    //Re-display the workouts on the page. 
                 }).then(function () {
                     displayWorkouts();
                 });
@@ -74,4 +82,4 @@ function writeWorkout() {
             // No user is signed in.
         }
     })
-}       //calling the function
+} 

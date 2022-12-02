@@ -20,7 +20,6 @@ function displayCards(collection) {
                       newcard.querySelector('.notes').innerHTML = notes;
                       newcard.querySelector('a').onclick = () => setTaskData(taskname);
                       newcard.querySelector('button').onclick = () => {setTaskData(taskname)
-                        // console.log("Delete")
                       if (confirm('Do you want to delete this task?')) {
                         // do delete item
                         db.collection("users").doc(user.uid).collection(collection).doc(localStorage.getItem("taskID")).delete();
@@ -47,7 +46,7 @@ function setTaskData(id){
             localStorage.setItem ('taskID', id);
             console.log(localStorage)
 }
-
+// automatically goes to the to do list
 function gototodolist () {
   window.location.href = "../todolist.html";
 }

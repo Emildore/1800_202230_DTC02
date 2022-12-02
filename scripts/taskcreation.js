@@ -1,8 +1,6 @@
 function writeTasks () {
   firebase.auth().onAuthStateChanged(user => {
         if (user) {
-          console.log(user.uid);
-          console.log("Task Created");
           alert("Adding Task...");
           let Taskname = document.getElementById("taskname").value;
           let Month = document.getElementById("datemonth").value;
